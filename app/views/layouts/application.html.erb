@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RealEstateTinder</title>
+    <title>Real Estate Tinder</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,12 @@
   </head>
 
   <body>
+     <% if current_user %>
+      <%= link_to "#{current_user.email}", user_path(current_user) %>
+      <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+    <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
