@@ -57,3 +57,4 @@ gem 'mini_racer', platforms: :ruby
 
 gem 'faker'
 gem 'hirb'
+gem 'responders'
