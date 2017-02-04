@@ -54,3 +54,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "react_on_rails", "~> 6"
 gem 'mini_racer', platforms: :ruby
+
+gem 'faker'
+gem 'hirb'
