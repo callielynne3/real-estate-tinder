@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'rentals/my_rentals', to: 'rentals#my_rentals'
 
   get 'welcome_hom', to: 'welcome#index'
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :users
 
   root 'site#index'
