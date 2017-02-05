@@ -16,6 +16,8 @@ const config = {
     './app/bundles/Site/startup/HelloWorld/helloWorldRegistration',
     './app/bundles/Site/startup/registration',
     './app/bundles/rentals/startup/registration',
+    './app/bundles/welcome/startup/findHomeLinkAppRegistration',
+    './app/bundles/welcome/startup/postAHomeLinkAppRegistration',
   ],
 
   output: {

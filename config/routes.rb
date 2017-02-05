@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-  # get 'rentals/new', to: 'rentals#new'
-  # get 'rentals/create', to: 'rentals#create'
 
-  root 'site#index'
-  # root 'hello_world#index'
-  devise_for :users
-  resources :users
   resources :rentals
   get 'rentals/my_rentals', to: 'rentals#my_rentals'
 
+  get 'welcome_hom', to: 'welcome#index'
+  devise_for :users
+  resources :users
+
+  root 'site#index'
   get 'hello_world', to: 'hello_world#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   namespace :api do
     namespace :v1 do
@@ -20,4 +18,5 @@ Rails.application.routes.draw do
       resources :votes, only: [:index, :create, :destroy, :update]
     end
   end
+
 end
