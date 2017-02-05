@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  root 'site#index'
-  # root 'hello_world#index'
+
+  get 'welcome_hom', to: 'welcome#index'
   devise_for :users
   resources :users
-  get 'hello_world', to: 'hello_world#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  root 'site#index'
+  get 'hello_world', to: 'hello_world#index'
+ 
   namespace :api do
     namespace :v1 do
       resources :rentals, only: [:index, :create, :destroy, :update]
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
       resources :votes, only: [:index, :create, :destroy, :update]
     end
   end
+
 end
