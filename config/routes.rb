@@ -1,17 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'welcome_hom', to: 'welcome#index'
   devise_for :users
   resources :users
-  get 'hello_world', to: 'hello_world#index'
-
 
   root 'site#index'
-
-  devise_for :users
-  resources :users
   get 'hello_world', to: 'hello_world#index'
  
-
   namespace :api do
     namespace :v1 do
       resources :rentals, only: [:index, :create, :destroy, :update]
