@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import WelcomeLinks from '../components/welcome_links/WelcomeLinks';
+import WelcomeLinks from '../components/WelcomeLinks';
 
 const mapStateToProps = (state) => ({ });
 
