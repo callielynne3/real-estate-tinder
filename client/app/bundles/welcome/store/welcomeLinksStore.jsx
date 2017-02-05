@@ -3,7 +3,7 @@ import welcomeLinksReducer from '../reducers/welcomeLinksReducer';
 
 
 const configureStore = (railsProps) => (
-  createStore(WelcomeLinksReducer, railsProps)
+  createStore(welcomeLinksReducer, railsProps)
 );
 
 export default configureStore;
