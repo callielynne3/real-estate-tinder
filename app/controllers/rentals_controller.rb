@@ -18,12 +18,11 @@ class RentalsController < ApplicationController
 
 #user posts a rental
 	def create
-
     @rentor = current_user
     @rental = @rentor.rentals.new(rental_params)
 
     if @rental.save
-      render 'placeholder'
+      render 'show'
     else
       render 'new'
     end
@@ -41,6 +40,18 @@ class RentalsController < ApplicationController
 # #user deletes their posted rental
 # 	def destroy
 # 	end
+
+#user previews rental post
+def preview
+  @rentor = current_user
+  @rental = @rentor.rentals.new(rental_params)
+
+  if @rental.valid?
+    render 'preview'
+  else
+    render 'new'
+  end
+end
 
 private
 
