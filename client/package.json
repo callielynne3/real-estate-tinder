@@ -29,7 +29,9 @@
     "react-on-rails": "6.5.0",
     "react-redux": "^5.0.1",
     "redux": "^3.6.0",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "react-google-maps": "^6.0.0",
+    "react-icons": "^2.2.3"
   },
   "devDependencies": {
   }
