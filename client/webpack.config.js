@@ -18,6 +18,7 @@ const config = {
     './app/bundles/rentals/startup/registration',
     './app/bundles/welcome/startup/welcomeLinksAppRegistration',
     './app/bundles/maps/startup/registration',
+    './app/bundles/users/startup/registration',
   ],
 
   output: {
