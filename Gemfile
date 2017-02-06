@@ -65,4 +65,4 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 
 
-ruby '2.2.6'
+ruby '2.3.1'
