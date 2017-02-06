@@ -16,17 +16,18 @@ const INPUT_STYLE = {
   boxSizing: `border-box`,
   MozBoxSizing: `border-box`,
   border: `1px solid transparent`,
-  width: `80vh`,
+  width: `72vh`,
   height: `10vh`, 
   marginTop: `0px`,
   padding: `0 12px`,
   borderRadius: `5px`,
-  boxShadow: `2px 2px 6px rgba(0, 0, 0, 0.2)`,
+  boxShadow: `0 2px 2px rgba(33, 33, 33, 0.4)`,
   fontSize: `14px`,
   outline: `none`,
   textOverflow: `ellipses`,
   background: `navy`,
   color: `white`,
+  opacity: `0.69`
 };
 
 const SearchBoxExampleGoogleMap = withGoogleMap(props => (
@@ -107,10 +108,10 @@ export default class SearchBoxExample extends Component {
     return (
       <SearchBoxExampleGoogleMap
         containerElement={
-          <div style={{ height: `55vh` }} />
+          <div style={{ height: `30vh` }} />
         }
         mapElement={
-          <div style={{ height: `55vh` }} />
+          <div style={{ height: `66vh` }} />
         }
         center={this.state.center}
         onMapMounted={this.handleMapMounted}

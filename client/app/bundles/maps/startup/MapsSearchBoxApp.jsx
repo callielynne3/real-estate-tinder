@@ -11,3 +11,5 @@ const MapsSearchBoxApp = (props, _railsContext) => (
 );
 
 export default MapsSearchBoxApp;
+
+

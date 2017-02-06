@@ -12,9 +12,9 @@ export default class WelcomeLinks extends React.Component {
   render() {
 
     return(
-      <div>
-        <a id="move me" href="http://www.google.com">Find something!</a> <br/>
-        <a href="/">Find your next home!</a>
+      <div className="welcomeLinks">
+        <a id="newRentalLink" href="/rentals/new">Post a Rental</a> <br/>
+        <a id="browseRentalsLink" href="/">Find your next home!</a>
       </div>
     )
   }
