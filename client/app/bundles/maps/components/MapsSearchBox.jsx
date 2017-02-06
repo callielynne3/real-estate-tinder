@@ -16,30 +16,31 @@ const INPUT_STYLE = {
   boxSizing: `border-box`,
   MozBoxSizing: `border-box`,
   border: `1px solid transparent`,
-  width: `240px`,
-  height: `32px`,
+  width: `80vh`,
+  height: `10vh`, 
   marginTop: `27px`,
   padding: `0 12px`,
-  borderRadius: `1px`,
+  borderRadius: `5px`,
   boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
   fontSize: `14px`,
   outline: `none`,
   textOverflow: `ellipses`,
+  background: `navy`,
 };
 
 const SearchBoxExampleGoogleMap = withGoogleMap(props => (
   <GoogleMap
     ref={props.onMapMounted}
-    defaultZoom={15}
+    defaultZoom={12}
     center={props.center}
     onBoundsChanged={props.onBoundsChanged}
   >
     <SearchBox
       ref={props.onSearchBoxMounted}
       bounds={props.bounds}
-      controlPosition={google.maps.ControlPosition.TOP_LEFT}
+      controlPosition={google.maps.ControlPosition.CENTER}
       onPlacesChanged={props.onPlacesChanged}
-      inputPlaceholder="Enter an address"
+      inputPlaceholder="Find your new Hôm"
       inputStyle={INPUT_STYLE}
     />
     {props.markers.map((marker, index) => (
