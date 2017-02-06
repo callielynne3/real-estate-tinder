@@ -21,10 +21,12 @@ User.all.each do |user|
     description: Faker::Lorem.paragraph,
     user_id: user.id
     )
+
+  Picture.create!(name: "string", alt_text: "string", url: Faker::LoremPixel.image, imageable_type: "Rental", imageable_id: user.id)
 end
 
 Rental.all.each do |rental|
-  Picture.create!(name: "string", alt_text: "string", url: Faker::LoremPixel.image, "imageable_type": ["Rental", "User"].sample, imageable_id: rental.id)
+  Picture.create!(name: "string", alt_text: "string", url: Faker::LoremPixel.image, imageable_type: "Rental", imageable_id: rental.id)
 end
 
 rentals = Rental.all
