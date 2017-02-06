@@ -1,0 +1,22 @@
+{
+  "base": "semantic/",
+  "paths": {
+    "source": {
+      "config": "src/theme.config",
+      "definitions": "src/definitions/",
+      "site": "src/site/",
+      "themes": "src/themes/"
+    },
+    "output": {
+      "packaged": "../../app/assets/stylesheets/dist/",
+      "uncompressed": "../../app/assets/stylesheets/dist/components/",
+      "compressed": "../../app/assets/stylesheets/dist/components/",
+      "themes": "../../app/assets/stylesheets/dist/themes/"
+    },
+    "clean": "dist/"
+  },
+  "permission": false,
+  "autoInstall": true,
+  "rtl": false,
+  "version": "2.2.7"
+}
