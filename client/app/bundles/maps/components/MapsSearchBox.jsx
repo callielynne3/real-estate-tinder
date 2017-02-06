@@ -18,20 +18,21 @@ const INPUT_STYLE = {
   border: `1px solid transparent`,
   width: `80vh`,
   height: `10vh`, 
-  marginTop: `27px`,
+  marginTop: `0px`,
   padding: `0 12px`,
   borderRadius: `5px`,
-  boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
+  boxShadow: `2px 2px 6px rgba(0, 0, 0, 0.2)`,
   fontSize: `14px`,
   outline: `none`,
   textOverflow: `ellipses`,
   background: `navy`,
+  color: `white`,
 };
 
 const SearchBoxExampleGoogleMap = withGoogleMap(props => (
   <GoogleMap
     ref={props.onMapMounted}
-    defaultZoom={12}
+    defaultZoom={13}
     center={props.center}
     onBoundsChanged={props.onBoundsChanged}
   >
@@ -59,8 +60,8 @@ export default class SearchBoxExample extends Component {
   state = {
     bounds: null,
     center: {
-      lat: 47.6205588,
-      lng: -122.3212725,
+      lat: 37.7749,
+      lng: -122.4194,
     },
     markers: [],
   };
