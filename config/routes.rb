@@ -2,13 +2,16 @@ Rails.application.routes.draw do
 
   resources :rentals
   get 'rentals/my_rentals', to: 'rentals#my_rentals'
+  post 'preview', to: 'rentals#preview'
+
+  get 'hello_world', to: 'hello_world#index'
 
   get 'welcome_hom', to: 'welcome#index'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :users
 
   root 'site#index'
-  get 'hello_world', to: 'hello_world#index'
+
 
   namespace :api do
     namespace :v1 do

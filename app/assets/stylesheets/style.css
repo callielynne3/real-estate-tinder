@@ -6,3 +6,14 @@
 .form_submit_button{
   padding: 5px 0 5px 15px;
 }
+
+#preview_form_field{
+  background-color: transparent;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #eeeeee 1px;
+  padding: 3px 10px;
+}
