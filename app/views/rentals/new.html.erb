@@ -1,7 +1,5 @@
-<%= react_component 'RentalFormApp' %>
-
-
 <h1>What kind of place would you like to list?</h1>
+<%= react_component 'RentalFormApp' %>
 
 <% if @rental %>
   <% @rental.errors.full_messages.each do |error| %>

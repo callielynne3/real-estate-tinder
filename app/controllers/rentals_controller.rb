@@ -2,6 +2,7 @@
 #posted AND queried by user
 
 class RentalsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
 
 # #list all rentals on the site
 # 	def index
@@ -45,6 +46,8 @@ class RentalsController < ApplicationController
 def preview
   @rentor = current_user
   @rental = @rentor.rentals.new(rental_params)
+  p '*' * 100
+  p @rental
 
   if @rental.valid?
     render 'preview'
