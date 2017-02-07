@@ -8,9 +8,10 @@ Rails.application.routes.draw do
 
   get 'welcome_hom', to: 'welcome#index'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  resources :users
+  resources :users, except: :show
+  get '/profile' => 'users#show'
 
-  root 'site#index'
+  root 'welcome#index'
 
 
   namespace :api do

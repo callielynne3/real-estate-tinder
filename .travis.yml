@@ -1,0 +1,36 @@
+sudo: required
+dist: trusty
+
+language: ruby
+
+rvm:
+  - 2.3.1
+
+services:
+  - postgresql
+
+addons:
+  postgresql: "9.6"
+
+before_script:
+  - RAILS_ENV=test bin/rails db:create --trace
+  - RAILS_ENV=test bin/rails db:migrate --trace
+
+before_install:
+  - gem update bundler
+
+script:
+  - bin/rails db:migrate --trace
+
+cache:
+  bundler: true
+  directories:
+    - node_modules
+    - client/node_modules
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: $HEROKU_APP
+  run:
+    - rails db:migrate --trace

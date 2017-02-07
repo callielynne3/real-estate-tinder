@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import Draggable from 'react-draggable';
 
 export default class Card extends React.Component {
   constructor(props) {
@@ -9,40 +11,42 @@ export default class Card extends React.Component {
     };
   }
 
-  componentDidMount() {
-    console.log('whatever the hell')
-    // $.getJSON('/api/v1/rentals.json', (response) => { this.setState({ rentals: response }) });
-  }
+  eventLogger = (e: MouseEvent, data: Object) => {
+    console.log('Event: ', event);
+    console.log('Data: ', data);
+  };
 
   render() {
+    const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
     return (
-      <div className="cardContainer">
-        <div className="box">
-          <p>this is a thing.</p>
+      <Draggable
+        handle=".handle"
+        zIndex={100}
+        {...dragHandlers}>
+        <div className="ui card handle">
+          <div className="image">
+            <img src="http://semantic-ui.com/images/avatar2/large/elyse.png" />
+          </div>
+          <div className="content">
+            <div className="header">Elyse</div>
+            <div className="meta">
+              <a>Coworker</a>
+            </div>
+            <div className="description">
+              Elyse is a copywriter working in New York.
+            </div>
+          </div>
+          <div className="extra content">
+            <span className="right floated">
+              Joined in 2014
+            </span>
+            <span>
+              <i className="user icon"></i>
+              151 Friends
+            </span>
+          </div>
         </div>
-      </div>
-    )
-    // if (this.state.rentals) {
-    //   var rentals = this.state.rentals.map((rental) => {
-    //     return (
-    //       <div key={rental.id}>
-    //         <h3>{rental.title}</h3>
-    //         <p>{rental.property_type}</p>
-    //       </div> )
-    //   });
-    // }
-    //
-    // return(
-    //   <div>
-    //     {rentals}
-    //   </div>
-    // )
+      </Draggable>
+    );
   }
 }
-
-Card.propTypes = {
-
-};
-Card.defaultProps = {
-
-};
