@@ -2,6 +2,7 @@
 #posted AND queried by user
 
 class RentalsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
 
 # #list all rentals on the site
 # 	def index
@@ -47,6 +48,8 @@ def preview
   @rental = @rentor.rentals.new(rental_params)
 
   if @rental.valid?
+    # active record object parsed to json
+    @rental = @rental.as_json
     render 'preview'
   else
     render 'new'

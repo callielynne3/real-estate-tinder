@@ -99,4 +99,7 @@ Rails.application.configure do
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
+
+  config.assets.paths << Rails.root.join("app", "assets", "fonts","assets/themes/default/assets/fonts", "themes/default/assets/fonts")
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
 end
