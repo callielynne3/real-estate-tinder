@@ -7,10 +7,11 @@ class UsersController < ApplicationController
     @user = current_user
     @rentals = @user.rentals
     @votes = @user.votes
-    @favorites = []
   end
 
   def edit
     @user = User.find(params[:id])
   end
+  
 end
+
