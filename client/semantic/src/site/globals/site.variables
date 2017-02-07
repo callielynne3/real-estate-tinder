@@ -6,8 +6,9 @@
 --------------------*/
 
 /*---  Colors  ---*/
-@loud-red         : #FF4D68;
-@turquoise        : #00A8AB;
-@blood-red        : #B03653;
-@dark-navy        : #16203B;
-@soft-navy        : #324065;
+@soft-blue   : #AEC2DA;
+@blue-berry  : #2A4362;
+@black-berry : #0A0C18;
+@dark-grey   : #666666;
+@light-grey  : #CCCBC7;
+@soft-white  : #F2F3F5;
