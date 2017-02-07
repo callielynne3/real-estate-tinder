@@ -16,13 +16,13 @@ export default class RentalForm extends React.Component {
       <div className="RentalFormContainer">
         <form action="/preview" method="post" className="ui form">
 
-            <div className="field">
+            <div className="required field">
               <label htmlFor="rental[title]">Title: </label>
               <input type="text" name="rental[title]" />
             </div>
 
           <div className="fields">
-            <div className="eight wide field">
+            <div className="required eight wide field">
               <label htmlFor="rental[address]">Address: </label>
               <input type="text" name="rental[address]" />
             </div>
@@ -33,18 +33,18 @@ export default class RentalForm extends React.Component {
             </div>
           </div>
 
-            <div className="field">
+            <div className="required field">
               <label htmlFor="rental[price]">Price: </label>
               <input type="number" name="rental[price]" />
             </div>
 
-          <div className="fields">
+          <div className="required fields">
             <div className="field">
               <label htmlFor="rental[beds]">Bedrooms: </label>
               <input type="number" name="rental[beds]" />
             </div>
 
-            <div className="field">
+            <div className="required field">
               <label htmlFor="rental[baths]">Bathrooms: </label>
               <input type="number" name="rental[baths]" />
             </div>
