@@ -18,6 +18,10 @@
   padding: 3px 10px;
 }
 
+img{
+  width:100%;
+}
+
 /*Hiding Google Map UI Buttons*/
 div [title="Show satellite imagery"]{
   display: none;
@@ -34,4 +38,3 @@ div [title="Show street map"]{
 .gmnoprint {
   display: none;
 }
-

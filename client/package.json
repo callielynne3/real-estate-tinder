@@ -32,7 +32,8 @@
     "webpack": "^1.14.0",
     "react-google-maps": "^6.0.0",
     "react-icons": "^2.2.3",
-    "semantic-ui": "^2.2.7"
+    "semantic-ui": "^2.2.7",
+    "react-draggable": "^2.2.3"
   },
   "devDependencies": {
   }
