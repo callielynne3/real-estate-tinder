@@ -29,3 +29,5 @@ export default class RentalQueries extends React.Component {
     )
   }
 }
+
+// PLEASE KEEP THE CORRECT FILE NAME
