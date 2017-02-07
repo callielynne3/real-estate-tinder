@@ -59,12 +59,12 @@ export default class RentalForm extends React.Component {
 
                 <div className="field">
                   <label htmlFor="rental[parking]">Parking: </label>
-                  <input type="text" name="rental[parking]" defaultValue="Street parking, garage, etc." />
+                  <input type="text" name="rental[parking]" placeholder="Street parking, garage, etc." />
                 </div>
 
                 <div className="field">
                   <label htmlFor="rental[description]">Rental Description: </label>
-                  <textarea name="rental[description]" defaultValue="Describe your rental in detail."></textarea>
+                  <textarea name="rental[description]" placeholder="Describe your rental in detail."></textarea>
                 </div>
 
                 <div className="ui one column centered grid">
