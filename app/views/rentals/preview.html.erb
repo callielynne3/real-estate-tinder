@@ -1,64 +1,12 @@
 <h1>Does everything look correct?</h1>
 
-<% if @rental %>
-  <% @rental.errors.full_messages.each do |error| %>
-    <%= error %>
-  <% end %>
-<% end %>
+<%= react_component 'PreviewRentalForm', props: @rental %>
 
-<%= form_for :rental, url: rentals_path do |f| %>
-  <div class="form_field" >
-    <%= label(:rental, :title) %>
-    <%= f.text_field :title, id: "preview_form_field" %>
-  </div>
+<%# if @rental %>
+  <%# @rental.errors.full_messages.each do |error| %>
+    <%#= error %>
+  <%# end %>
+<%# end %>
 
-  <div class="form_field" >
-    <%= label(:rental, :property_type) %>
-    <%= f.text_field :property_type, id: "preview_form_field" %>
-  </div>
 
-  <div class="form_field">
-    <%= label(:rental, :address) %>
-    <%= f.text_field :address, id: "preview_form_field" %>
-  </div>
 
-  <div class="form_field" >
-    <%= label(:rental, :unit) %>
-    <%= f.text_field :unit, id: "preview_form_field" %>
-  </div>
-
-  <div class="form_field" >
-    <%= label(:rental, :price) %>
-    <%= f.text_field :price, id: "preview_form_field" %>
-  </div>
-
-  <div class="form_field" >
-    <%= label(:rental, :beds) %>
-    <%= f.text_field :beds, id: "preview_form_field" %>
-  </div>
-
-  <div class="form_field" >
-    <%= label(:rental, :baths) %>
-    <%= f.text_field :baths, id: "preview_form_field" %>
-  </div>
-
-  <div class="form_field" >
-    <%= label(:rental, :pets) %>
-    <%= f.text_field :pets, id: "preview_form_field" %>
-  </div>
-
-  <div class="form_field" >
-    <%= label(:rental, :parking) %>
-    <%= f.text_field :parking, id: "preview_form_field" %>
-  </div>
-
-  <div class="form_field" >
-    <%= label(:rental, :description) %>
-    <%= f.text_field :description, id: "preview_form_field" %>
-  </div>
-
-  <div class="form_submit_button" >
-    <%= f.submit "Yes, please list my rental" %>
-  </div>
-
-<% end %>
