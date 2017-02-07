@@ -11,6 +11,8 @@ import {
 } from "react-google-maps/lib";
 
 import SearchBox from "react-google-maps/lib/places/SearchBox";
+import RentalQueries from "../../welcome/components/RentalQueries";
+
 
 const INPUT_STYLE = {
   boxSizing: `border-box`,
@@ -45,6 +47,7 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
       inputPlaceholder="Find your new Hôm"
       inputStyle={INPUT_STYLE}
     />
+    <RentalQueries/>
     {props.markers.map((marker, index) => (
       <Marker position={marker.position} key={index} />
     ))}
