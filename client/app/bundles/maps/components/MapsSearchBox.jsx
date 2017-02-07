@@ -12,6 +12,7 @@ import {
 
 import SearchBox from "react-google-maps/lib/places/SearchBox";
 
+
 const INPUT_STYLE = {
   boxSizing: `border-box`,
   MozBoxSizing: `border-box`,
