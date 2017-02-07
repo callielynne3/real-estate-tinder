@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users, except: :show
   get '/profile' => 'users#show'
 
-  root 'site#index'
+  root 'welcome#index'
 
 
   namespace :api do
