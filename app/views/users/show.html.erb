@@ -20,3 +20,5 @@
   <% end %>
 </div>
 
+<%= react_component("UserProfileApp", props: { user: @user, rentals: @rentals, votes: @votes }, prerender: false) %>
+

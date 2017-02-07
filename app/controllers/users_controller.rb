@@ -7,6 +7,5 @@ class UsersController < ApplicationController
     @user = current_user
     @rentals = @user.rentals
     @votes = @user.votes
-    @favorites = []
   end 
 end 
