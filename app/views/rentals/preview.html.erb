@@ -1,12 +1,8 @@
 <h1>Does everything look correct?</h1>
 
-<%= react_component 'PreviewRentalForm', props: @rental %>
+<%= react_component 'PreviewRentalForm', props: @rental.as_json %>
 
-<%# if @rental %>
-  <%# @rental.errors.full_messages.each do |error| %>
-    <%#= error %>
-  <%# end %>
-<%# end %>
+
 
 
 
