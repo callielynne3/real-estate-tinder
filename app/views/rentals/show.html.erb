@@ -1,1 +1,103 @@
-<h1>Placeholder for rental show page</h1>
+<div class="ui container">
+  <div class="ui one column centered grid">
+
+    <div class="column">
+      <h1 class="ui centered header">
+        <%= @rental.title %>
+      </h1>
+    </div>
+
+    <div class="column">
+      <img src="http://placehold.it/1000x500">
+    </div>
+
+    <div class="column">
+      <div class="ui segment">
+        <p>
+          Type: <%= @rental.property_type %>
+        </p>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="ui segment">
+        <p>
+          Address: <%= @rental.address %>
+        </p>
+      </div>
+    </div>
+
+    <% if @rental.unit %>
+      <div class="column">
+        <div class="ui segment">
+          <p>
+            Unit: <%= @rental.unit %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="column">
+      <div class="ui segment">
+        <p>
+          Rent per month:<%= @rental.price.to_s %>
+        </p>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="ui segment">
+        <p>
+          Bedrooms:<%= @rental.beds.to_s %>
+        </p>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="ui segment">
+        <p>
+          Bathrooms:<%= @rental.baths.to_s %>
+        </p>
+      </div>
+    </div>
+
+    <% if @rental.pets %>
+      <div class="column">
+        <div class="ui segment">
+          <p>
+            <% if @rental.pets == true %>
+              Pet friendly?: Yes
+            <% else %>
+              Pet friendly?: No
+            <% end %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+
+    <% if @rental.parking %>
+      <div class="column">
+        <div class="ui segment">
+          <p>
+            Parking: <% @rental.parking %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+
+    <% if @rental.description %>
+      <div class="column">
+        <div class="ui segment">
+          <p>
+            Description: <% @rental.description %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+
+
+
+
+
+  </div>
+</div>
