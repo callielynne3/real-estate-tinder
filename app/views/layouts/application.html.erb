@@ -12,8 +12,15 @@
 
   <body>
     <%= render partial: '/site/header' %>
+    <%= render partial: '/site/dropdown' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
+    <script>
+    $('.ui.dropdown')
+      .dropdown()
+    ;
+    </script>
   </body>
 </html>
