@@ -44,28 +44,7 @@ div [title="Show street map"]{
   margin: 0px auto;
 }
 
-#propertyType {
-  display:inline;
-  boxSizing: border-box;
-  MozBoxSizing: border-box;
-  border: 1px solid transparent;
-  width: 24vh;
-  height: 10vh; 
-  marginTop: 0px;
-  padding: 0 12px;
-  borderRadius: 5px;
-  boxShadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-  fontSize: 14px;
-  outline: none;
-  textOverflow: ellipses;
-  background: navy;
-  color: white;
-  opacity: 0.69;
-  margin-right: 2px;
-  margin-left: 2px;
-}
-
-#priceRange {
+.rentalQueries select {
   display:inline;
   boxSizing: border-box;
   MozBoxSizing: border-box;
