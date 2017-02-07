@@ -3,7 +3,7 @@
   padding: 5px 0 5px 15px;
 }
 
-.form_submit_button{
+.form-submit-button{
   padding: 5px 0 5px 15px;
 }
 
@@ -16,4 +16,12 @@
   border-right: none;
   border-bottom: solid #eeeeee 1px;
   padding: 3px 10px;
+}
+
+#form-prompt{
+  padding: 15px 0 15px 0;
+}
+
+#checkbox{
+  padding: 0 0 15px 0;
 }
