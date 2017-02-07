@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ibraheem4/real-estate-tinder.svg?branch=master)](https://travis-ci.org/callielynne3/real-estate-tinder)
+[![Build Status](https://travis-ci.org/callielynne3/real-estate-tinder.svg?branch=master)](https://travis-ci.org/callielynne3/real-estate-tinder)
 
 ## Setup
 
