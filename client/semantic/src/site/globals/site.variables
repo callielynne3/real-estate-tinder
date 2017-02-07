@@ -1,3 +1,13 @@
 /*******************************
      User Global Variables
 *******************************/
+/*-------------------
+    Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@loud-red         : #FF4D68;
+@turquoise        : #00A8AB;
+@blood-red        : #B03653;
+@dark-navy        : #16203B;
+@soft-navy        : #324065;
