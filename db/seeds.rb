@@ -4,7 +4,7 @@ Rental.destroy_all
 User.destroy_all
 
 5.times do
-  User.create!(email: Faker::Internet.email, password: "password")
+  User.create!(email: Faker::Internet.email, password: "password", picture: Faker::LoremPixel.image)
 end
 
 User.all.each do |user|
