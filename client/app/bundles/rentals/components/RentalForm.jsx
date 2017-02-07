@@ -40,8 +40,8 @@ export default class RentalForm extends React.Component {
                   <input type="number" name="rental[price]" min="0" />
                 </div>
 
-              <div className="required fields">
-                <div className="field">
+              <div className="fields">
+                <div className="required field">
                   <label htmlFor="rental[beds]">Bedrooms: </label>
                   <input type="number" name="rental[beds]" min="0"/>
                 </div>
