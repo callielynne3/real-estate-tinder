@@ -9,7 +9,8 @@
   "scripts": {
     "build:test": "webpack --config webpack.config.js",
     "build:production": "NODE_ENV=production webpack --config webpack.config.js",
-    "build:development": "webpack -w --config webpack.config.js"
+    "build:development": "webpack -w --config webpack.config.js",
+    "postinstall": "cd semantic && gulp build"
   },
   "cacheDirectories": ["node_modules", "client/node_modules"],
   "dependencies": {
@@ -33,7 +34,8 @@
     "react-google-maps": "^6.0.0",
     "react-icons": "^2.2.3",
     "semantic-ui": "^2.2.7",
-    "react-draggable": "^2.2.3"
+    "react-draggable": "^2.2.3",
+    "gulp": "^3.9.1"
   },
   "devDependencies": {
   }
