@@ -93,7 +93,7 @@ export default class PreviewRentalForm extends React.Component {
         </div>
 
         <div className="field">
-          <input type="submit" value="List My Rental"/>
+          <input type="submit" value="List My Rental" className="ui button"/>
         </div>
 
         </form>
