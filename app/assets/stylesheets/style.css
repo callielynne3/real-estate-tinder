@@ -17,3 +17,21 @@
   border-bottom: solid #eeeeee 1px;
   padding: 3px 10px;
 }
+
+/*Hiding Google Map UI Buttons*/
+div [title="Show satellite imagery"]{
+  display: none;
+}
+
+div [title="Show street map"]{
+  display: none;
+}
+
+.gm-svpc {
+  display: none;
+}
+
+.gmnoprint {
+  display: none;
+}
+

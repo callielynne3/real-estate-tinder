@@ -65,6 +65,7 @@ export default class SearchBoxExample extends Component {
       lng: -122.4194,
     },
     markers: [],
+    disableDefaultUI: true,
   };
 
   handleMapMounted = this.handleMapMounted.bind(this);
