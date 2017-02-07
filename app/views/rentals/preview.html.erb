@@ -1,12 +1,10 @@
-<h1>Does everything look correct?</h1>
+<div class="ui container">
+  <h1 class="ui header" id="form-prompt">Does everything look correct?</h1>
+</div>
 
-<%= react_component 'PreviewRentalForm', props: @rental %>
+<%= react_component 'PreviewRentalForm', props: @rental.as_json %>
 
-<%# if @rental %>
-  <%# @rental.errors.full_messages.each do |error| %>
-    <%#= error %>
-  <%# end %>
-<%# end %>
+
 
 
 

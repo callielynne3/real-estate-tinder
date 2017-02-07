@@ -1,12 +1,14 @@
 <div class="ui container">
   <h1 class="ui header" id="form-prompt">What kind of place would you like to list?</h1>
-</div>
 
 <% if @rental %>
-  <% @rental.errors.full_messages.each do |error| %>
-    <%= error %>
-  <% end %>
+  <ul class="error-list">
+    <% @rental.errors.full_messages.each do |error| %>
+      <li class="ui error message"><%= error %></li>
+    <% end %>
+  </ul>
 <% end %>
+</div>
 
 <%= react_component 'RentalFormApp' %>
 

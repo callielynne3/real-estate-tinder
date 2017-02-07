@@ -45,6 +45,17 @@ nav #the-o {
   padding: 0 0 15px 0;
 }
 
+.error-list{
+  list-style: none;
+}
+
+#preview-field{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  /*border-bottom: 1px solid black;*/
+}
+
 /*Hiding Google Map UI Buttons*/
 div [title="Show satellite imagery"]{
   display: none;
@@ -92,4 +103,5 @@ div [title="Show street map"]{
   margin-right: 2px;
   margin-left: 2px;
 }
+
 
