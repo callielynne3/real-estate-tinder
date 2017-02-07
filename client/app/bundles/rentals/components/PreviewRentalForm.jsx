@@ -48,6 +48,11 @@ export default class PreviewRentalForm extends React.Component {
               </div>
             </div>
 
+            <div className="five wide field">
+              <label htmlFor="rental[type]">Type of place: </label>
+              <input type="text" name="rental[type]" placeholder="Apartment or room?" />
+            </div>
+
             <div className="required field">
               <label htmlFor="rental[price]">Price: </label>
               <input
