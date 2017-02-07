@@ -15,7 +15,7 @@ import {
 const SimpleMapExampleGoogleMap = withGoogleMap(props => (
   <GoogleMap
     defaultZoom={8}
-    defaultCenter={{ lat: -34.397, lng: 150.644 }}
+    defaultCenter={{ lat: 37.774, lng: -122.419 }}
   />
 ));
 
@@ -28,10 +28,14 @@ export default class SimpleMapExample extends Component {
     return (
       <SimpleMapExampleGoogleMap
         containerElement={
-          <div style={{ height: `100vw` }} />
+          <div style={{ 
+            height: `0vw` 
+          }} />
         }
         mapElement={
-          <div style={{ height: `55vh` }} />
+          <div style={{ 
+            height: `0vh` 
+          }} />
         }
       />
     );

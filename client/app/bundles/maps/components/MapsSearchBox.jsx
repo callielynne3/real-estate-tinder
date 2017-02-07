@@ -11,37 +11,43 @@ import {
 } from "react-google-maps/lib";
 
 import SearchBox from "react-google-maps/lib/places/SearchBox";
+import RentalQueries from "../../welcome/components/RentalQueries";
+
 
 const INPUT_STYLE = {
   boxSizing: `border-box`,
   MozBoxSizing: `border-box`,
   border: `1px solid transparent`,
-  width: `240px`,
-  height: `32px`,
-  marginTop: `27px`,
+  width: `72vh`,
+  height: `10vh`, 
+  marginTop: `0px`,
   padding: `0 12px`,
-  borderRadius: `1px`,
-  boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
+  borderRadius: `5px`,
+  boxShadow: `0 2px 2px rgba(33, 33, 33, 0.4)`,
   fontSize: `14px`,
   outline: `none`,
   textOverflow: `ellipses`,
+  background: `navy`,
+  color: `white`,
+  opacity: `0.69`
 };
 
 const SearchBoxExampleGoogleMap = withGoogleMap(props => (
   <GoogleMap
     ref={props.onMapMounted}
-    defaultZoom={15}
+    defaultZoom={13}
     center={props.center}
     onBoundsChanged={props.onBoundsChanged}
   >
     <SearchBox
       ref={props.onSearchBoxMounted}
       bounds={props.bounds}
-      controlPosition={google.maps.ControlPosition.TOP_LEFT}
+      controlPosition={google.maps.ControlPosition.CENTER}
       onPlacesChanged={props.onPlacesChanged}
-      inputPlaceholder="Enter an address"
+      inputPlaceholder="Find your new Hôm"
       inputStyle={INPUT_STYLE}
     />
+    <RentalQueries/>
     {props.markers.map((marker, index) => (
       <Marker position={marker.position} key={index} />
     ))}
@@ -58,10 +64,11 @@ export default class SearchBoxExample extends Component {
   state = {
     bounds: null,
     center: {
-      lat: 47.6205588,
-      lng: -122.3212725,
+      lat: 37.7749,
+      lng: -122.4194,
     },
     markers: [],
+    disableDefaultUI: true,
   };
 
   handleMapMounted = this.handleMapMounted.bind(this);
@@ -105,10 +112,10 @@ export default class SearchBoxExample extends Component {
     return (
       <SearchBoxExampleGoogleMap
         containerElement={
-          <div style={{ height: `55vh` }} />
+          <div style={{ height: `30vh` }} />
         }
         mapElement={
-          <div style={{ height: `55vh` }} />
+          <div style={{ height: `66vh` }} />
         }
         center={this.state.center}
         onMapMounted={this.handleMapMounted}
