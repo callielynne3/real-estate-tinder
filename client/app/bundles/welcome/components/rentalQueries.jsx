@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class rentalQueries extends React.Component {
+export default class RentalQueries extends React.Component {
   constructor(props) {
     super(props);
 

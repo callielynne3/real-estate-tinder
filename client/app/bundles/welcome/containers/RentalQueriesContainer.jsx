@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import rentalQueries from '../components/rentalQueries';
+import RentalQueries from '../components/RentalQueries';
 
 const mapStateToProps = (state) => ({ });
 
-export default connect(mapStateToProps, null)(rentalQueries);
+export default connect(mapStateToProps, null)(RentalQueries);
