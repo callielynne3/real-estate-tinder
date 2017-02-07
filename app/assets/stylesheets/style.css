@@ -17,3 +17,56 @@
   border-bottom: solid #eeeeee 1px;
   padding: 3px 10px;
 }
+
+img{
+  width:100%;
+}
+
+/*Hiding Google Map UI Buttons*/
+div [title="Show satellite imagery"]{
+  display: none;
+}
+
+div [title="Show street map"]{
+  display: none;
+}
+
+.gm-svpc {
+  display: none;
+}
+
+.gmnoprint {
+  display: none;
+}
+
+
+/*Styling queries on Welcome page*/
+.rentalQueriesContainer {
+  display: flex;
+}
+
+.rentalQueries {
+  margin: 0px auto;
+}
+
+.rentalQueries select {
+  display:inline;
+  boxSizing: border-box;
+  MozBoxSizing: border-box;
+  border: 1px solid transparent;
+  width: 24vh;
+  height: 10vh; 
+  marginTop: 0px;
+  padding: 0 12px;
+  borderRadius: 5px;
+  boxShadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+  fontSize: 14px;
+  outline: none;
+  textOverflow: ellipses;
+  background: navy;
+  color: white;
+  opacity: 0.69;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+

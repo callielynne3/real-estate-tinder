@@ -1,10 +1,10 @@
 import ReactOnRails from 'react-on-rails';
 
-import MapsApp from './MapsApp';
-import MapsSearchBoxApp from './MapsSearchBoxApp';
+import WelcomeLinksApp from './WelcomeLinksApp';
+import RentalQueriesApp from './RentalQueriesApp'
 
 // This is how react_on_rails can see the HelloWorld in the browser.
 ReactOnRails.register({
-  MapsApp,
-  MapsSearchBoxApp,
+  WelcomeLinksApp,
+  RentalQueriesApp,
 });
