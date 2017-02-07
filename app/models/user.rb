@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  mount_uploader :picture, PictureUploader
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
@@ -7,6 +9,10 @@ class User < ApplicationRecord
   has_many :pictures, as: :imageable, dependent: :destroy
   has_many :votes, dependent: :destroy
   has_many :rentals, dependent: :destroy
+
+  # User Picture Validation
+  validates_integrity_of  :picture
+  validates_processing_of :picture
 
   def self.from_omniauth(access_token)
     data = access_token.info
@@ -21,4 +27,9 @@ class User < ApplicationRecord
     end
     user
   end
+
+  private
+    def picture_size_validation
+      errors[:picture] << "should be less than 500KB" if picture.size > 0.5.megabytes
+    end
 end

@@ -1,12 +1,16 @@
 class UsersController < ApplicationController
-  def index 
+  def index
     @users = User.all
-  end 
+  end
 
   def show
     @user = current_user
     @rentals = @user.rentals
     @votes = @user.votes
     @favorites = []
-  end 
-end 
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+end
