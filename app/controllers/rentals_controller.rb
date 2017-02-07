@@ -46,10 +46,10 @@ class RentalsController < ApplicationController
 def preview
   @rentor = current_user
   @rental = @rentor.rentals.new(rental_params)
-  p '*' * 100
-  p @rental
 
   if @rental.valid?
+    # active record object parsed to json
+    @rental = @rental.as_json
     render 'preview'
   else
     render 'new'

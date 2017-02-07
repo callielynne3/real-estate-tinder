@@ -7,6 +7,6 @@ const description = (state = '', action) => {
   }
 };
 
-const previewRentalFormReducer = combineReducers({ description });
+const rentalFormReducer = combineReducers({ description });
 
-export default previewRentalFormReducer;
+export default rentalFormReducer;

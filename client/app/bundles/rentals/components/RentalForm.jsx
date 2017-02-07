@@ -13,7 +13,7 @@ export default class RentalForm extends React.Component {
   render() {
     return (
 
-      <div className="previewRentalFormContainer">
+      <div className="RentalFormContainer">
         <form action="/preview" method="post">
 
         <div className="field">
