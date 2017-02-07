@@ -1,9 +1,28 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+nav img {
+  display: inline;
+}
+
+nav h1 {
+  margin: 0px;
+  padding-top: 5px;
+  display: inline;
+  font-weight: 100;
+}
+
+nav #the-o {
+  font-weight: 400;
+}
+
 .form_field{
   display: block;
   padding: 5px 0 5px 15px;
 }
 
-.form_submit_button{
+.form-submit-button{
   padding: 5px 0 5px 15px;
 }
 
@@ -18,8 +37,12 @@
   padding: 3px 10px;
 }
 
-img{
-  width:100%;
+#form-prompt{
+  padding: 15px 0 15px 0;
+}
+
+#checkbox{
+  padding: 0 0 15px 0;
 }
 
 /*Hiding Google Map UI Buttons*/
@@ -55,7 +78,7 @@ div [title="Show street map"]{
   MozBoxSizing: border-box;
   border: 1px solid transparent;
   width: 24vh;
-  height: 10vh; 
+  height: 10vh;
   marginTop: 0px;
   padding: 0 12px;
   borderRadius: 5px;
