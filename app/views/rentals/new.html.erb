@@ -1,11 +1,16 @@
-<h1>What kind of place would you like to list?</h1>
-<%= react_component 'RentalFormApp' %>
+<div class="ui container">
+  <h1 class="ui header" id="form-prompt">What kind of place would you like to list?</h1>
+</div>
 
 <% if @rental %>
   <% @rental.errors.full_messages.each do |error| %>
     <%= error %>
   <% end %>
 <% end %>
+
+<%= react_component 'RentalFormApp' %>
+
+
 
 
 
