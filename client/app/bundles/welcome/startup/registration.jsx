@@ -1,10 +1,10 @@
 import ReactOnRails from 'react-on-rails';
 
-import WelcomeLinksApp from './WelcomeLinksApp';
-import RentalQueriesApp from './RentalQueriesApp'
+import WelcomeLinks from '../components/WelcomeLinks';
+import RentalQueries from '../components/RentalQueries'
 
 // This is how react_on_rails can see the HelloWorld in the browser.
 ReactOnRails.register({
-  WelcomeLinksApp,
-  RentalQueriesApp,
+  WelcomeLinks,
+  RentalQueries
 });
