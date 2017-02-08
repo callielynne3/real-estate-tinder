@@ -19,7 +19,7 @@ const INPUT_STYLE = {
   MozBoxSizing: `border-box`,
   border: `1px solid transparent`,
   width: `72vh`,
-  height: `10vh`, 
+  height: `10vh`,
   marginTop: `0px`,
   padding: `0 12px`,
   borderRadius: `5px`,

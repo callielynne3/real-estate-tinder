@@ -29,7 +29,7 @@ class RentalsController < ApplicationController
     @rental = @rentor.rentals.new(rental_params)
 
     if @rental.save
-      render 'new'
+      render 'show'
     else
       render 'new'
     end
