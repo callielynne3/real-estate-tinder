@@ -1,24 +1,4 @@
-<h1>Welcome, <%=@user.email %></h1>
+<h1>Howdy, <%= @user.email %></h1>
 
-<div class="listings">
-  <% if @rentals.length != 0 %>
-  <h1>Your Listings</h1>
-    <% @rentals.each do |listing| %>
-      <p>Title: <%= listing.title %></p>
-      <p>Description: <%= listing.description %></p>
-    <% end %> 
-  <% end %> 
-</div><br>
-
-<div class="favorites">
-  <h1>Favorites</h1>
-  <% @votes.each do |this_vote| %>
-    <% if this_vote.vote == 1 %>
-      <% @this_rental = Rental.find(this_vote.rental_id) %>
-      <p>Title: <%= @this_rental.title %></p>
-    <% end %>
-  <% end %>
-</div>
-
-<%= react_component("UserProfileApp", props: { user: @user, rentals: @rentals, votes: @votes }, prerender: false) %>
+<%= react_component("UserProfile", props: { user: @user, rentals: @rentals,votes: @votes, newRentalLink: new_rental_path, homeLink: root_path }, prerender: false) %>
 

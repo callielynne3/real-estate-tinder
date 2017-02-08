@@ -1,42 +1,34 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
-export default class UserProfile extends React.Component {
+class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      email: this.props.email
-    };
+  }
+  renderFavorites() {
+    if (this.props.votes.length === 0) {
+      return <a href={this.props.homeLink}>Find Your New Home</a>;
+    } else {
+      return <h1><a href="my_votes">My Favorites</a></h1>;
+    }
   }
 
+
+  renderRentals() {
+    if (this.props.rentals.length === 0) {
+      return <a href={this.props.newRentalLink}>Post a New Listing</a>;
+    } else {
+      return <h1><a href="my_rentals">My Rentals</a></h1>;
+    }
+  }
   render() {
+    console.log(this.props);
     return (
-      <div className="userProfileContainer">
-        <div className="box">
-          <p>{this.state.email}</p>
-        </div>
+      <div>
+        {this.renderRentals()}
+        {this.renderFavorites()}
       </div>
-    )
+    );
   }
 }
 
-UserProfile.propTypes = {
-  email: PropTypes.string.isRequired
-};
-
-// import React, { PropTypes } from 'react';
-
-// const UserProfile = ({ email }) => (
-//   <div>
-//     <h3>
-//       Hello, {email}!
-//     </h3>
-//   </div>
-// );
-
-// UserProfile.propTypes = {
-//   email: PropTypes.string.isRequired
-// };
-
-// export default UserProfile;
-
+export default UserProfile;

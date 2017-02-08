@@ -4,7 +4,7 @@ Rental.destroy_all
 User.destroy_all
 
 5.times do
-  User.create!(email: Faker::Internet.email, password: "password", picture: Faker::LoremPixel.image)
+  User.create!(email: Faker::Internet.email, password: "password", remote_picture_url: Faker::LoremPixel.image)
 end
 
 User.all.each do |user|
@@ -19,6 +19,7 @@ User.all.each do |user|
     pets: ["Cats OK", "Dogs OK", "No Pets"].sample,
     parking: ["Garage", "Street"].sample,
     description: Faker::Lorem.paragraph,
+    pictures: [Faker::LoremPixel.image, Faker::LoremPixel.image].to_a, # FIX: multiple pictures
     user_id: user.id
     )
 
