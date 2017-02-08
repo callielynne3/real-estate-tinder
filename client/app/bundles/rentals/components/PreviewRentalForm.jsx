@@ -49,8 +49,8 @@ export default class PreviewRentalForm extends React.Component {
             </div>
 
             <div className="five wide field">
-              <label htmlFor="rental[type]">Type of place: </label>
-              <input type="text" name="rental[type]" id="preview-field" placeholder="Apartment or room?" />
+              <label htmlFor="rental[property_type]">Type of place: </label>
+              <input type="text" name="rental[property_type]" id="preview-field" placeholder="Apartment or room?" />
             </div>
 
             <div className="field">
@@ -91,9 +91,9 @@ export default class PreviewRentalForm extends React.Component {
             <div className="ui checkbox" id="checkbox">
               <input
                   type="Checkbox"
-                  tabindex="0"
+                  tabIndex="0"
                   name="rental[pets]"
-                  class="hidden"
+                  className="hidden"
                   defaultValue={this.props.pets}
                 />
               <label htmlFor="rental[pets]">
@@ -118,6 +118,12 @@ export default class PreviewRentalForm extends React.Component {
                 id="preview-field"
                 defaultValue={this.props.parking}>
               </textarea>
+            </div>
+
+            <label htmlFor="rental[pictures]">Picures: </label>
+            <div className="field">
+              <input type="file" name="rental[pictures][]" multiple />
+              <input type="hidden" name="rental[pictures_cache]" />
             </div>
 
             <div className="field form-submit-button">
