@@ -10,6 +10,7 @@ export default class MyRentals extends React.Component {
       return (
         <div key={rental.id} className="">
           <h3>{rental.title}</h3>
+          <h4>{rental.description}</h4>
         </div>
       );
     });
@@ -18,7 +19,7 @@ export default class MyRentals extends React.Component {
   render() {
     return (
       <div>
-        <h1>My Listings</h1>
+        <h1>My Rentals</h1>
         {this.renderRentals()}
       </div>
     );
