@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :rentals
   get 'my_rentals', to: 'rentals#my_rentals'
+  get 'my_votes', to: 'rentals#my_votes'
   post 'preview', to: 'rentals#preview'
 
   get 'hello_world', to: 'hello_world#index'

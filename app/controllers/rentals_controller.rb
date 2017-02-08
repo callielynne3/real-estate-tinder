@@ -8,10 +8,14 @@ class RentalsController < ApplicationController
 # 	def index
 # 	end
 
+  def my_votes
+    @user = current_user
+    @rentals = Rental.where(id: @user.votes.where(vote: 1).pluck(:rental_id))
+  end 
+
 	def my_rentals
     @user = current_user
     @rentals = @user.rentals
-  render 'my_rentals'
 	end
 
 #user gets form to post a rental
