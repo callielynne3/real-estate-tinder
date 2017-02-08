@@ -47,7 +47,7 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
       inputPlaceholder="Find your new Hôm"
       inputStyle={INPUT_STYLE}
     />
-    <RentalQueries/>
+    <RentalQueries />
     {props.markers.map((marker, index) => (
       <Marker position={marker.position} key={index} />
     ))}
