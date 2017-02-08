@@ -273,4 +273,6 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'],
     { }
+
+  config.secret_key = '4727d4dac3d8bacef2225d61114ce29f031b14bf0879a0d239fbda3d722d20655400324b2bdd6fb8866e3ede67a0e9d96789c580c27cab5f382bae4812b7bb59'
 end
