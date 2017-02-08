@@ -30,6 +30,6 @@ class User < ApplicationRecord
 
   private
     def picture_size_validation
-      errors[:picture] << "should be less than 500KB" if picture.size > 0.5.megabytes
+      errors[:pictures] << "should be less than 500KB" if pictures.size > 2.5.megabytes
     end
 end
