@@ -58,7 +58,7 @@ export default class RentalForm extends React.Component {
               </div>
 
                 <div className="ui checkbox" id="checkbox">
-                    <input type="Checkbox"  tabIndex="0" name="rental[pets]" className="hidden"/>
+                    <input type="Checkbox"  tabIndex="0" name="rental[pets]" defaultValue="true" />
                     <label htmlFor="rental[pets]">Pet Friendly</label>
                 </div>
 

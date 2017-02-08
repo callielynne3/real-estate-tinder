@@ -16,7 +16,7 @@ export default class PreviewRentalForm extends React.Component {
         <div className="ui container">
           <form action="/rentals" method="post" className="ui big form" >
 
-            <div className="required field">
+            <div className="field">
               <label htmlFor="rental[title]">Title: </label>
               <input
                 type="text"
@@ -27,7 +27,7 @@ export default class PreviewRentalForm extends React.Component {
             </div>
 
             <div className="fields">
-              <div className="required eight wide field">
+              <div className="eight wide field">
                 <label htmlFor="rental[address]">Address: </label>
                 <input
                   type="text"
@@ -50,10 +50,10 @@ export default class PreviewRentalForm extends React.Component {
 
             <div className="five wide field">
               <label htmlFor="rental[type]">Type of place: </label>
-              <input type="text" name="rental[type]" placeholder="Apartment or room?" />
+              <input type="text" name="rental[type]" id="preview-field" placeholder="Apartment or room?" />
             </div>
 
-            <div className="required field">
+            <div className="field">
               <label htmlFor="rental[price]">Price: </label>
               <input
                 type="number"
@@ -65,7 +65,7 @@ export default class PreviewRentalForm extends React.Component {
             </div>
 
             <div className="fields">
-              <div className="required field">
+              <div className="field">
                 <label htmlFor="rental[beds]">Bedrooms: </label>
                 <input
                   type="number"
@@ -76,7 +76,7 @@ export default class PreviewRentalForm extends React.Component {
                 />
               </div>
 
-              <div className="required field">
+              <div className="field">
                 <label htmlFor="rental[baths]">Bathrooms: </label>
                 <input
                   type="number"
