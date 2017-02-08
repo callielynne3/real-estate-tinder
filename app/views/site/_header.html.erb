@@ -30,17 +30,17 @@
 
           <div class="menu">
 
-            <a href="<%= user_path(current_user) %>" class="item">
+            <a href="<%= profile_path %>" class="item">
               <i class="user icon"></i>
               Profile
             </a>
 
-            <a href="<%= user_path(current_user) %>/Favorites" class="item">
+            <a href="/my_votes" class="item">
               <i class="heart icon"></i>
               Favorites
             </a>
 
-            <a href="<%= user_path(current_user) %>/rentals" class="item">
+            <a href="/my_rentals" class="item">
               <i class="home icon"></i>
               Listed Rentals
             </a>
@@ -55,8 +55,14 @@
 
 
       <% else %>
-        <a class="ui item">LogIn <i class="sign in icon"></i></a>
-        <a href="<%= new_user_registration_path %>" class="ui item">Register <i class="add user icon"></i></a>
+        <a class="ui item">
+          <i class="sign in icon"></i>
+          LogIn
+        </a>
+        <a href="<%= new_user_registration_path %>" class="ui item">
+          <i class="add user icon"></i>
+          Register
+        </a>
       <% end %>
     </div>
   </div>
