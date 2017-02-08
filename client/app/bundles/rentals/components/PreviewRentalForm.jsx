@@ -120,8 +120,8 @@ export default class PreviewRentalForm extends React.Component {
               </textarea>
             </div>
 
-            <label htmlFor="rental[pictures]">Picures: </label>
             <div className="field">
+              <label htmlFor="rental[pictures]">Pictures: </label>
               <input type="file" name="rental[pictures][]" multiple />
               <input type="hidden" name="rental[pictures_cache]" />
             </div>

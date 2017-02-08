@@ -72,8 +72,8 @@ export default class RentalForm extends React.Component {
                   <textarea name="rental[description]" placeholder="Describe your rental in detail."></textarea>
                 </div>
 
-                <label htmlFor="rental[pictures]">Picures: </label>
                 <div className="field">
+                  <label htmlFor="rental[pictures]">Pictures: </label>
                   <input type="file" name="rental[pictures][]" multiple />
                   <input type="hidden" name="rental[pictures_cache]" />
                 </div>

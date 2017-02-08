@@ -13,14 +13,4 @@ Rails.application.routes.draw do
   get '/profile' => 'users#show'
 
   root 'welcome#index'
-
-  namespace :api do
-    namespace :v1 do
-      resources :rentals, only: [:index, :create, :destroy, :update]
-      resources :users, only: [:index, :create, :destroy, :update]
-      resources :pictures, only: [:index, :create, :destroy, :update]
-      resources :votes, only: [:index, :create, :destroy, :update]
-    end
-  end
-
 end
