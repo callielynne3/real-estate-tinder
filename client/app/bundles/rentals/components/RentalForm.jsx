@@ -35,6 +35,11 @@ export default class RentalForm extends React.Component {
                 </div>
               </div>
 
+                <div className="five wide field">
+                  <label htmlFor="rental[type]">Type of place: </label>
+                  <input type="text" name="rental[type]" placeholder="Apartment or room?" />
+                </div>
+
                 <div className="required field">
                   <label htmlFor="rental[price]">Price: </label>
                   <input type="number" name="rental[price]" min="0" />
@@ -53,7 +58,7 @@ export default class RentalForm extends React.Component {
               </div>
 
                 <div className="ui checkbox" id="checkbox">
-                    <input type="Checkbox"  tabIndex="0" name="rental[pets]" className="hidden"/>
+                    <input type="Checkbox"  tabIndex="0" name="rental[pets]" defaultValue="true" />
                     <label htmlFor="rental[pets]">Pet Friendly</label>
                 </div>
 

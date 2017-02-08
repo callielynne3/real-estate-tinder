@@ -8,9 +8,15 @@ class RentalsController < ApplicationController
   # 	def index
   # 	end
 
-  # #user views all rentals they posted
-  # 	def my_rentals
-  # 	end
+  def my_votes
+    @user = current_user
+    @rentals = Rental.where(id: @user.votes.where(vote: 1).pluck(:rental_id))
+  end 
+
+	def my_rentals
+    @user = current_user
+    @rentals = @user.rentals
+	end
 
   #user gets form to post a rental
   def new
@@ -31,10 +37,14 @@ class RentalsController < ApplicationController
     end
 
   end
+  
+  def show
+    @rental = Rental.find_by(id: params[:id])
+  end
 
-  # #user gets form to edit their posted rental
-  # 	def edit
-  # 	end
+# #user gets form to edit their posted rental
+# 	def edit
+# 	end
 
   # #user edits their posted rental
   # 	def update
