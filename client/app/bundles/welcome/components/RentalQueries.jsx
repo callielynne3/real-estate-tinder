@@ -13,18 +13,21 @@ export default class RentalQueries extends React.Component {
 
     return(
       <div className="rentalQueriesContainer">
-        <div className="rentalQueries">
-            <select id="propertyType">
-              <option value="apartment">Studio/Apartment</option>
-              <option value="room">Room</option>
-            </select>
-            <select id="priceRange">
-              <option value="lowest">less than $1,000</option>
-              <option value="low">$1,000 - $2,000</option>
-              <option value="medium">$3,000 - $4,000</option>
-              <option value="high">more than $4,000</option>
-            </select>
-        </div>
+        <form action="/" method="get">
+          <div className="rentalQueries">
+              <select id="propertyType">
+                <option value="apartment">Studio/Apartment</option>
+                <option value="room">Room</option>
+              </select>
+              <select id="priceRange">
+                <option value="lowest">less than $1,000</option>
+                <option value="low">$1,000 - $2,000</option>
+                <option value="medium">$3,000 - $4,000</option>
+                <option value="high">more than $4,000</option>
+              </select>
+              <input type="submit" value="Start Browsing"/>
+          </div>
+          </form>
       </div>
     )
   }

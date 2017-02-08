@@ -84,7 +84,7 @@ div [title="Show street map"]{
 }
 
 .rentalQueries select {
-  display:inline;
+  display: inline;
   boxSizing: border-box;
   MozBoxSizing: border-box;
   border: 1px solid transparent;
@@ -99,7 +99,7 @@ div [title="Show street map"]{
   textOverflow: ellipses;
   background: navy;
   color: white;
-  opacity: 0.69;
+  opacity: 0.5;
   margin-right: 2px;
   margin-left: 2px;
 }
