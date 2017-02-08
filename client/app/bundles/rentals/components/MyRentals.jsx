@@ -9,8 +9,29 @@ export default class MyRentals extends React.Component {
     return this.props.rentals.map((rental) => {
       return (
         <div key={rental.id} className="">
-          <h3>{rental.title}</h3>
-          <h4>{rental.description}</h4>
+          <div className="ui card">
+            <div className="image">
+              <img src="http://semantic-ui.com/images/avatar2/large/elyse.png" />
+            </div>
+            <div className="content">
+              <div className="header">{rental.title}</div>
+              <div className="meta">
+                <a>{rental.address}</a>
+              </div>
+              <div className="description">
+                {rental.property_type}
+              </div>
+            </div>
+            <div className="extra content">
+              <span className="right floated">
+                Posted on 
+              </span>
+              <span>
+                <i className="user icon"></i>
+                Posted by {rental.ret}
+              </span>
+            </div>
+          </div>
         </div>
       );
     });
