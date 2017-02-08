@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :rentals
-  get 'rentals/my_rentals', to: 'rentals#my_rentals'
+  get 'my_rentals', to: 'rentals#my_rentals'
   post 'preview', to: 'rentals#preview'
 
   get 'hello_world', to: 'hello_world#index'

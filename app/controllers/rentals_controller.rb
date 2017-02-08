@@ -8,9 +8,11 @@ class RentalsController < ApplicationController
 # 	def index
 # 	end
 
-# #user views all rentals they posted
-# 	def my_rentals
-# 	end
+	def my_rentals
+    @user = current_user
+    @rentals = @user.rentals
+  render 'my_rentals'
+	end
 
 #user gets form to post a rental
 	def new
