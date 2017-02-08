@@ -18,7 +18,7 @@ export default class MyRentals extends React.Component {
 
   render() {
     return (
-      <div>
+       <div>
         <h1>My Rentals</h1>
         {this.renderRentals()}
       </div>
