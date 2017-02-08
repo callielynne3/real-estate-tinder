@@ -16,7 +16,7 @@ export default class RentalForm extends React.Component {
       <div className="RentalFormContainer">
         <div className="ui container">
 
-            <form action="/preview" method="post" className="ui big form">
+            <form action="/rentals" method="post" enctype="multipart/form-data" className="ui big form">
 
                 <div className="required field">
                   <label htmlFor="rental[title]">Title: </label>
@@ -70,6 +70,11 @@ export default class RentalForm extends React.Component {
                 <div className="field">
                   <label htmlFor="rental[description]">Rental Description: </label>
                   <textarea name="rental[description]" placeholder="Describe your rental in detail."></textarea>
+                </div>
+
+                <div className="field">
+                  <input type="file" name="rental[pictures]" multiple />
+                  <input type="hidden" name="rental[pictures_cache]" />
                 </div>
 
                 <div className="ui one column centered grid">

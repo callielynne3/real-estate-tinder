@@ -23,3 +23,5 @@ node_modules
 /app/assets/webpack/*
 
 .env
+
+/public/uploads/
