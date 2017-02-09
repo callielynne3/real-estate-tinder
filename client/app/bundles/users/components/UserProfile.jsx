@@ -6,18 +6,24 @@ class UserProfile extends React.Component {
   }
   renderFavorites() {
     if (this.props.votes.length === 0) {
-      return <a href={this.props.homeLink}>Find Your New Home</a>;
+      return 
+        <div>
+          <button class="ui button"><a href={this.props.homeLink}>Find Your New Home</a></button>
+        </div>;
     } else {
-      return <h1><a href="my_votes">My Favorites</a></h1>;
+      return <button className="ui button"><a href="my_votes">My Favorites</a></button>
     }
   }
 
 
   renderRentals() {
     if (this.props.rentals.length === 0) {
-      return <a href={this.props.newRentalLink}>Post a New Listing</a>;
+      return 
+        <div>
+          <button class="ui button"><a href={this.props.newRentalLink}>Post a New Listing</a></button>
+        </div>;
     } else {
-      return <h1><a href="my_rentals">My Rentals</a></h1>;
+      return <button className="ui button"><a href="my_rentals">My Rentals</a></button>;
     }
   }
   render() {

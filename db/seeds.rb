@@ -12,10 +12,10 @@ User.all.each do |user|
     title: Faker::Lorem.sentence,
     property_type: ["Apartment", "Room"].sample,
     address: Faker::Address.street_address,
-    unit: [1..20].sample,
-    price: [750, 1000, 1250, 1500, 2000, 5000],
-    beds: [0..5].sample,
-    baths: [1..5].sample,
+    unit: rand(1..20),
+    price: [750, 1000, 1250, 1500, 2000, 5000].sample,
+    beds: rand(0..5),
+    baths: rand(1..5),
     pets: ["Cats OK", "Dogs OK", "No Pets"].sample,
     parking: ["Garage", "Street"].sample,
     description: Faker::Lorem.paragraph,
@@ -34,5 +34,5 @@ rentals = Rental.all
 users = User.all
 
 15.times do
-  Vote.create!(user: users.sample, rental: rentals.sample, vote: [1,-1].sample)
+  Vote.create!(user: users.first, rental: rentals.sample, vote: [1,-1].sample)
 end
