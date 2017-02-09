@@ -64,5 +64,6 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'rspec-rails'
 
 ruby '2.3.1'
