@@ -7,4 +7,13 @@ $(document).on('turbolinks:load', function() {
   //    $('.ui .item').removeClass('active');
   //    $(this).addClass('active');
   // });
+
+  $('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
 });
