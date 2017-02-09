@@ -35,7 +35,9 @@
     "react-icons": "^2.2.3",
     "semantic-ui": "^2.2.7",
     "react-draggable": "^2.2.3",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "react-swipe": "^5.0.6",
+    "swipe-js-iso": "^2.0.3"
   },
   "devDependencies": {
     "eslint": "^3.14.1",
