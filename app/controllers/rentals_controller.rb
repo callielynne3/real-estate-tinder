@@ -20,6 +20,7 @@ class RentalsController < ApplicationController
 
   def browse
     # find rentals whwere zip code and property type match the query parameters using Geocoder
+    Rental.near(params[:center.lat()], params[:center.lng()]], 5)
     @rentals = Rental.all
     render json: @rentals
   end
