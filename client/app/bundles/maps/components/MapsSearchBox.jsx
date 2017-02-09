@@ -121,7 +121,7 @@ export default class SearchBoxExample extends Component {
   }
 
   handleSubmit() {
-    const { address, priceRange, propertyType, center } = this.state;
+    const { address, priceRange, propertyType } = this.state;
 
     $.ajax({
       url: '/rentals/browse',
@@ -130,7 +130,6 @@ export default class SearchBoxExample extends Component {
         address,
         priceRange, 
         propertyType,
-        center
       }
     }).done(function(response) {
       // this response needs to get rendered as a list of cards that is swiped through
