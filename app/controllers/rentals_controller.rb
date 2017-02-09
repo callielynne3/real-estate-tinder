@@ -10,20 +10,13 @@ class RentalsController < ApplicationController
 
   def my_votes
     @user = current_user
-    # array of rental_ids that have been positively voted on
-    @rental_ids = @user.votes.where(vote: 1).pluck(:rental_id)
-    @rentals = []
-    @rental_ids.each do |rental_id|
-      @rentals << Rental.find(rental_id)
-    end
-
-    @rentals
+    @votes = @user.votes.where(vote: 1).as_json(include: { rental: { include: { rentor: { only: [:email] } } } })
   end
 
-	def my_rentals
+  def my_rentals
     @user = current_user
-    @rentals = @user.rentals
-	end
+    @rentals = @user.rentals.as_json(include: { rentor: { only: [:email] } })
+  end
 
   #user gets form to post a rental
   def new
