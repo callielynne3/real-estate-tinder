@@ -12,7 +12,7 @@ export default class MyRentals extends React.Component {
         <div key={rental.id} className="five wide column">
           <div className="ui card">
             <div className="image">
-              <img src="http://lorempixel.com/400/200/" />
+              <img src={rental.pictures[0]} />
             </div>
             <div className="content">
               <div className="header">{rental.title}</div>
