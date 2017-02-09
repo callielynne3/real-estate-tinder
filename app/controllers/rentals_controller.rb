@@ -2,17 +2,17 @@
 #posted AND queried by user
 
 class RentalsController < ApplicationController
+  before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:show]
   skip_before_filter  :verify_authenticity_token
-
-  # #list all rentals on the site
-  # 	def index
-  # 	end
 
   def my_votes
     @user = current_user
-    # array of rental_ids that have been positively voted on
+    # array of vote.rental_ids where the votes are "likes" (positive votes)
     @rental_ids = @user.votes.where(vote: 1).pluck(:rental_id)
+
     @rentals = []
+
     @rental_ids.each do |rental_id|
       @rentals << Rental.find(rental_id)
     end
@@ -40,24 +40,11 @@ class RentalsController < ApplicationController
     else
       render 'new'
     end
-
   end
 
   def show
     @rental = Rental.find_by(id: params[:id])
   end
-
-  # #user gets form to edit their posted rental
-  # 	def edit
-  # 	end
-
-  # #user edits their posted rental
-  # 	def update
-  # 	end
-
-  # #user deletes their posted rental
-  # 	def destroy
-  # 	end
 
   #user previews rental post
   def preview

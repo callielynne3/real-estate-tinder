@@ -10,6 +10,9 @@ class Rental < ApplicationRecord
   validates_integrity_of  :pictures
   validates_processing_of :pictures
 
+  # Rental Validation
+  validates :title, :property_type, :address, :price, :beds, presence: true
+
   private
     def picture_size_validation
       errors[:picture] << "should be less than 500KB" if pictures.size > 0.5.megabytes
