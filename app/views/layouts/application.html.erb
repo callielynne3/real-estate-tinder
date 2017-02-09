@@ -11,23 +11,25 @@
 
   <body>
     <%= render partial: '/site/header' %>
-
-    <div class="ui container">
-      <% if notice %>
+    <div class="main-content">
+      <div class="ui container">
+        <% if notice %>
         <div class="ui positive message">
           <i class="close icon"></i>
           <div class="header notice"><%= notice %></div>
         </div>
-      <% end %>
+        <% end %>
 
-      <% if alert %>
+        <% if alert %>
         <div class="ui negative message">
           <i class="close icon"></i>
           <div class="header notice"><%= alert %></div>
         </div>
-      <% end %>
+        <% end %>
+      </div>
+      <%= yield %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </div>
-    <%= yield %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
