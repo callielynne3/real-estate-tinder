@@ -7,19 +7,46 @@ export default class MyRentals extends React.Component {
 
   renderRentals() {
     return this.props.rentals.map((rental) => {
+
       return (
-        <div key={rental.id} className="">
-          <h3>{rental.title}</h3>
-        </div>
+        <div className="five wide column">
+            <div key={rental.id} className="">
+              <div className="ui card">
+                <div className="image">
+                  <img src="http://lorempixel.com/400/200/" />
+                </div>
+                <div className="content">
+                  <div className="header">{rental.title}</div>
+                  <div className="meta">
+                    <a>{rental.address}</a>
+                  </div>
+                  <div className="description">
+                    {rental.property_type}
+                  </div>
+                </div>
+                <div className="extra content">
+                  <span className="right floated">
+                    Posted by {rental.user_id}
+                  </span>
+                  <span>
+                    <i className="user icon"></i>
+                    Posted on {rental.created_at}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>  
       );
     });
   }
 
   render() {
     return (
-      <div>
-        <h1>My Listings</h1>
-        {this.renderRentals()}
+       <div>
+        <h1>My Rentals</h1>
+        <div className="ui grid container stackable">
+          {this.renderRentals()}
+        </div>
       </div>
     );
   }

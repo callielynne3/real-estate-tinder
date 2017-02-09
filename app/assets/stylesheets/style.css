@@ -102,7 +102,7 @@ div [title="Show street map"]{
 
 
 /*Styling queries on Welcome page*/
-.rentalQueriesContainer {
+/*.rentalQueriesContainer {
   display: flex;
 }
 
@@ -111,7 +111,7 @@ div [title="Show street map"]{
 }
 
 .rentalQueries select {
-  display:inline;
+  display: inline;
   boxSizing: border-box;
   MozBoxSizing: border-box;
   border: 1px solid transparent;
@@ -121,12 +121,21 @@ div [title="Show street map"]{
   padding: 0 12px;
   borderRadius: 5px;
   boxShadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-  fontSize: 14px;
+  fontSize: 120px;
   outline: none;
   textOverflow: ellipses;
   background: navy;
   color: white;
-  opacity: 0.69;
+  opacity: 0.5;
   margin-right: 2px;
   margin-left: 2px;
+}*/
+
+.rentalQueries, .rentalQueriesContainer, .rentalQueries > select {
+  z-index: 9999;
+  display: flex;
+}
+
+.rentalQueries, .rentalQueriesContainer {
+  margin: 0px auto;
 }
