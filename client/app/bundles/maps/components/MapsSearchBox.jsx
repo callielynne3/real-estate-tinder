@@ -68,7 +68,7 @@ export default class SearchBoxExample extends Component {
     },
     markers: [],
     priceRange: 'lowest', 
-    propertyType: 'room',   
+    propertyType: 'apartment',   
   };
 
   handleMapMounted = this.handleMapMounted.bind(this);
