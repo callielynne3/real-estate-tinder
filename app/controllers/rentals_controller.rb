@@ -2,7 +2,7 @@
 #posted AND queried by user
 
 class RentalsController < ApplicationController
-  skip_before_filter  :verify_authenticity_token
+  skip_before_action  :verify_authenticity_token
 
   # #list all rentals on the site
   # 	def index
@@ -17,6 +17,12 @@ class RentalsController < ApplicationController
     @user = current_user
     @rentals = @user.rentals
 	end
+
+  def browse
+    # find rentals whwere zip code and property type match the query parameters using Geocoder
+    @rentals = Rental.all
+    render json: @rentals
+  end
 
   #user gets form to post a rental
   def new

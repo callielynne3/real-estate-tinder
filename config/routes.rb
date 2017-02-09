@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rentals/browse' => 'rentals#browse'
 
   resources :rentals
   get 'my_rentals', to: 'rentals#my_rentals'
@@ -13,4 +14,5 @@ Rails.application.routes.draw do
   get '/profile' => 'users#show'
 
   root 'welcome#index'
+
 end

@@ -60,7 +60,6 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
  * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
  */
 export default class SearchBoxExample extends Component {
-
   state = {
     bounds: null,
     center: {
@@ -68,7 +67,8 @@ export default class SearchBoxExample extends Component {
       lng: -122.4194,
     },
     markers: [],
-    disableDefaultUI: true,
+    priceRange: 'lowest', 
+    propertyType: 'room',   
   };
 
   handleMapMounted = this.handleMapMounted.bind(this);
@@ -126,16 +126,21 @@ export default class SearchBoxExample extends Component {
   }
 
   handleSubmit() {
-    const { address, priceRange, propertyType } = this.state;
-    // const address = this.state.address
-    // const priceRange = this.state.priceRange
-    // const propertyType = this.state.propertyType
+    const { address, priceRange, propertyType, center } = this.state;
 
-    console.log(address)
-    console.log(priceRange)
-    console.log(propertyType)
-    // do your ajax here 'GET'
-    // $.ajax(('get'))
+    $.ajax({
+      url: '/rentals/browse',
+      method: 'get',
+      data: {
+        address,
+        priceRange, 
+        propertyType,
+        center
+      }
+    }).done(function(response) {
+      // this response needs to get rendered as a list of cards that is swiped through
+      console.log(response)
+    })
 
   }
 
