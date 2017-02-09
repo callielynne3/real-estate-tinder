@@ -90,7 +90,6 @@ export default class SearchBoxExample extends Component {
   }
 
   handlePlacesChanged() {
-
     const places = this._searchBox.getPlaces();
 
     // Add a marker for each place returned from search bar
@@ -132,7 +131,7 @@ export default class SearchBoxExample extends Component {
         propertyType,
       }
     }).done(function(response) {
-      // this response needs to get rendered as a list of cards that is swiped through
+      // Render a list of search-appropriate rentals as cards
       console.log(response)
     })
 
@@ -175,3 +174,4 @@ export default class SearchBoxExample extends Component {
     );
   }
 }
+
