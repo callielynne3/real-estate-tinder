@@ -46,6 +46,19 @@ class RentalsController < ApplicationController
     @rental = Rental.find_by(id: params[:id])
   end
 
+  #user gets form to edit their posted rental
+  def edit
+    @rental = Rental.find_by(id: params[:id])
+  end
+
+  # #user edits their posted rental
+  # 	def update
+  # 	end
+
+  # #user deletes their posted rental
+  # 	def destroy
+  # 	end
+
   #user previews rental post
   def preview
     @rentor = current_user
@@ -63,7 +76,7 @@ class RentalsController < ApplicationController
   private
 
   def rental_params
-    params.require(:rental).permit(:title, :property_type, :address, :unit, :price, :beds, :baths, :pets, :parking, :description, :pictures_cache, pictures: [])
+    params.require(:rental).permit(:title, :property_type, :address, :unit, :price, :beds, :baths, :pets, :parking, :description, :pictures_cache, :remove_pictures, pictures: [])
   end
 
 end

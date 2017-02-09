@@ -9,6 +9,16 @@ export default class PreviewRentalForm extends React.Component {
     };
   }
 
+  renderPictures() {
+    return this.props.pictures.map((picture) => {
+      return (
+        <div key={picture.file}>
+          <img src={picture.url} />
+        </div>
+      );
+    });
+  }
+
   render() {
     return (
 
@@ -116,16 +126,18 @@ export default class PreviewRentalForm extends React.Component {
               <textarea
                 name="rental[description]"
                 id="preview-field"
-                defaultValue={this.props.parking}>
+                defaultValue={this.props.description}>
               </textarea>
             </div>
 
             <div className="field">
               <label htmlFor="rental[pictures]">Pictures: </label>
+              {this.renderPictures()}
+              <label htmlFor="rental_remove_pictures"></label>
+              <input name="rental[remove_pictures]" type="hidden" value="0" />
+              <input type="checkbox" value="1" name="rental[remove_pictures]" />
               <input type="file" name="rental[pictures][]" multiple />
-              <input type="hidden"
-                name="rental[pictures_cache]"
-                defaultValue={this.props.pictures_cache} />
+              <input type="hidden" name="rental[pictures_cache]" defaultValue={this.props.pictures} />
             </div>
 
             <div className="field form-submit-button">
@@ -142,7 +154,3 @@ export default class PreviewRentalForm extends React.Component {
 
   }
 }
-
-
-
-
