@@ -123,7 +123,9 @@ export default class PreviewRentalForm extends React.Component {
             <div className="field">
               <label htmlFor="rental[pictures]">Pictures: </label>
               <input type="file" name="rental[pictures][]" multiple />
-              <input type="hidden" name="rental[pictures_cache]" />
+              <input type="hidden"
+                name="rental[pictures_cache]"
+                defaultValue={this.props.pictures_cache} />
             </div>
 
             <div className="field form-submit-button">

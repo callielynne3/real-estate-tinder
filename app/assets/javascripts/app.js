@@ -4,6 +4,20 @@ $(document).on('turbolinks:load', function() {
     .dropdown()
   ;
 
+  // $('.ui .item').on('mouseenter', function() {
+  //    $('.ui .item').removeClass('active');
+  //    $(this).addClass('active');
+  // });
+
+  $('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
+  
   $(window).scroll(
       {
           previousTop: 0
@@ -22,5 +36,4 @@ $(document).on('turbolinks:load', function() {
     }, 100)
 
   });
-
 });

@@ -1,10 +1,23 @@
+<% if resource.errors.full_messages.count > 0 %>
+  <div class="ui container">
+    <div class="ui negative message">
+      <i class="close icon"></i>
+      <div class="header notice">
+        <% resource.errors.full_messages.each do |error| %>
+          <%= error %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div class="ui three column grid">
   <div class="five wide column"></div>
   <div class="six wide column">
+
     <h2>Sign up</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {class: "ui big form"})  do |f| %>
-    <%= devise_error_messages! %>
 
     <div class="required field">
       <%= f.label :email %>
@@ -13,9 +26,6 @@
 
     <div class="required field">
       <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %>
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
@@ -35,7 +45,5 @@
     </div>
     <% end %>
 
-    <%# render "devise/shared/links" %>
   </div>
-  <div class="five wide column"></div>
 </div>
