@@ -35,9 +35,14 @@ class UserProfile extends React.Component {
     console.log(this.props);
     return (
       <div>
+        <div className="ui two column centered grid">
+          <div className="two column centered row"><h1>Account</h1></div>
+          <div className="two column centered row">{this.renderPicture()}</div>
+          <div className="two column centered row">{this.props.user.email}</div>
+        </div>
+
         {this.renderRentals()}
         {this.renderFavorites()}
-        {this.renderPicture()}
       </div>
     );
   }
