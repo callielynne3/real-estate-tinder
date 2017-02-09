@@ -11,6 +11,8 @@ User.all.each do |user|
   Rental.create!(
     title: Faker::Lorem.sentence,
     property_type: ["Apartment", "Room"].sample,
+    latitude: Faker::Address.latitude,
+    longitude: Faker::Address.longitude,
     address: Faker::Address.street_address,
     unit: rand(1..20),
     price: [750, 1000, 1250, 1500, 2000, 5000].sample,

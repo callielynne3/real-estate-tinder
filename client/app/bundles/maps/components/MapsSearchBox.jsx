@@ -11,7 +11,6 @@ import {
 } from "react-google-maps/lib";
 
 import SearchBox from "react-google-maps/lib/places/SearchBox";
-import RentalQueries from "../../welcome/components/RentalQueries";
 
 
 const INPUT_STYLE = {

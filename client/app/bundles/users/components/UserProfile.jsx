@@ -4,6 +4,11 @@ class UserProfile extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  renderPicture() {
+   return <img src={this.props.user.picture.url} />
+  }
+
   renderFavorites() {
     if (this.props.votes.length === 0) {
       return 
@@ -32,6 +37,7 @@ class UserProfile extends React.Component {
       <div>
         {this.renderRentals()}
         {this.renderFavorites()}
+        {this.renderPicture()}
       </div>
     );
   }
