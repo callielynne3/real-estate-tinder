@@ -21,6 +21,7 @@ node_modules
 
 # Generated js bundles
 /app/assets/webpack/*
+/app/assets/*/dist/*
 
 .env
 
