@@ -21,7 +21,7 @@ before_install:
 
 script:
   - bin/rails db:migrate --trace
-  - bin/rails test --trace
+  - bin/rails spec
 
 cache:
   bundler: true
