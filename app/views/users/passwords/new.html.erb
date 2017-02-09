@@ -1,8 +1,5 @@
 <h2>Forgot your password?</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-
-
   <div class="ui container">
     <div class="ui negative message">
       <i class="close icon"></i>
@@ -11,6 +8,9 @@
       </div>
     </div>
   </div>
+
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 
   <div class="field">
     <%= f.label :email %><br />
