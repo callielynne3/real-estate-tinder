@@ -55,7 +55,6 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
  * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
  */
 export default class SearchBoxExample extends Component {
-
   state = {
     bounds: null,
     center: {
@@ -63,7 +62,8 @@ export default class SearchBoxExample extends Component {
       lng: -122.4194,
     },
     markers: [],
-    disableDefaultUI: true,
+    priceRange: 'lowest', 
+    propertyType: 'apartment',   
   };
 
   handleMapMounted = this.handleMapMounted.bind(this);
@@ -90,7 +90,6 @@ export default class SearchBoxExample extends Component {
   }
 
   handlePlacesChanged() {
-
     const places = this._searchBox.getPlaces();
 
     // Add a marker for each place returned from search bar
@@ -122,15 +121,19 @@ export default class SearchBoxExample extends Component {
 
   handleSubmit() {
     const { address, priceRange, propertyType } = this.state;
-    // const address = this.state.address
-    // const priceRange = this.state.priceRange
-    // const propertyType = this.state.propertyType
 
-    console.log(address)
-    console.log(priceRange)
-    console.log(propertyType)
-    // do your ajax here 'GET'
-    // $.ajax(('get'))
+    $.ajax({
+      url: '/rentals/browse',
+      method: 'get',
+      data: {
+        address,
+        priceRange, 
+        propertyType,
+      }
+    }).done(function(response) {
+      // Render a list of search-appropriate rentals as cards
+      console.log(response)
+    })
 
   }
 
@@ -171,3 +174,4 @@ export default class SearchBoxExample extends Component {
     );
   }
 }
+

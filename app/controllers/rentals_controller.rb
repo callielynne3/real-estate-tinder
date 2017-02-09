@@ -2,9 +2,10 @@
 #posted AND queried by user
 
 class RentalsController < ApplicationController
+  skip_before_action  :verify_authenticity_token
   before_action :authenticate_user!
   skip_before_action :authenticate_user!, only: [:show]
-  skip_before_filter  :verify_authenticity_token
+
 
   def my_votes
     @user = current_user
@@ -23,6 +24,16 @@ class RentalsController < ApplicationController
   def my_rentals
     @user = current_user
     @rentals = @user.rentals.as_json(include: { rentor: { only: [:email] } })
+  end
+
+  def browse
+    #Geocoder needs an instance of the model with an address to call geocode on
+    @lat_lng = Rental.new(address: params[:address]).geocode
+
+    #Find rentals where zip code matches the query parameters
+    @rentals = Rental.near(@lat_lng, 5) 
+     
+    render json: @rentals
   end
 
   #user gets form to post a rental
