@@ -22,7 +22,6 @@ before_install:
 
 script:
   - bin/rails db:migrate --trace
-  - RAILS_ENV=production bin/rails assets:precompile
   - bin/rails spec
 
 cache:
