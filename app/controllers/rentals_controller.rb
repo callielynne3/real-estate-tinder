@@ -9,15 +9,6 @@ class RentalsController < ApplicationController
 
   def my_votes
     @user = current_user
-    # array of vote.rental_ids where the votes are "likes" (positive votes)
-    @rental_ids = @user.votes.where(vote: 1).pluck(:rental_id)
-
-    @rentals = []
-
-    @rental_ids.each do |rental_id|
-      @rentals << Rental.find(rental_id)
-    end
-
     @votes = @user.votes.where(vote: 1).as_json(include: { rental: { include: { rentor: { only: [:email] } } } })
   end
 
@@ -31,8 +22,8 @@ class RentalsController < ApplicationController
     @lat_lng = Rental.new(address: params[:address]).geocode
 
     #Find rentals where zip code matches the query parameters
-    @rentals = Rental.near(@lat_lng, 5) 
-     
+    @rentals = Rental.near(@lat_lng, 5)
+
     render json: @rentals
   end
 

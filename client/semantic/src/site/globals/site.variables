@@ -11,3 +11,8 @@
 @blood-red        : #B03653;
 @dark-navy        : #16203B;
 @soft-navy        : #324065;
+
+/*---  Fonts  ---*/
+@headerFont        : 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'Oswald', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@googleFontFamily  : 'Open+Sans:400italic,400|Oswald:400,700';

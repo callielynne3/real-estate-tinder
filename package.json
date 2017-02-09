@@ -7,7 +7,8 @@
     "npm": "4.1.1"
   },
   "scripts": {
-    "postinstall": "RAILS_ENV=production rails assets:precompile && cd client && npm install",
+    "postinstall": "cd client && npm install",
+    "assets": "RAILS_ENV=production rails assets:precompile",
     "rails-server": "echo 'visit http://localhost:3000/hello_world' && foreman start -f Procfile.dev",
     "test": "rspec"
   },

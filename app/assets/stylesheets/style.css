@@ -1,7 +1,3 @@
-* {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
 .main-content {
   margin-top: 70px;
 }
@@ -103,37 +99,6 @@ div [title="Show street map"]{
 .gmnoprint {
   display: none;
 }
-
-
-/*Styling queries on Welcome page*/
-/*.rentalQueriesContainer {
-  display: flex;
-}
-
-.rentalQueries {
-  margin: 0px auto;
-}
-
-.rentalQueries select {
-  display: inline;
-  boxSizing: border-box;
-  MozBoxSizing: border-box;
-  border: 1px solid transparent;
-  width: 24vh;
-  height: 10vh;
-  marginTop: 0px;
-  padding: 0 12px;
-  borderRadius: 5px;
-  boxShadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-  fontSize: 120px;
-  outline: none;
-  textOverflow: ellipses;
-  background: navy;
-  color: white;
-  opacity: 0.5;
-  margin-right: 2px;
-  margin-left: 2px;
-}*/
 
 .rentalQueries, .rentalQueriesContainer, .rentalQueries > select {
   z-index: 9999;
