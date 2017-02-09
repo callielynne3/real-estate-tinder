@@ -75,7 +75,7 @@ div [title="Show street map"]{
 
 
 /*Styling queries on Welcome page*/
-.rentalQueriesContainer {
+/*.rentalQueriesContainer {
   display: flex;
 }
 
@@ -102,6 +102,13 @@ div [title="Show street map"]{
   opacity: 0.5;
   margin-right: 2px;
   margin-left: 2px;
+}*/
+
+.rentalQueries, .rentalQueriesContainer, .rentalQueries > select {
+  z-index: 9999;
+  display: flex;
 }
 
-
+.rentalQueries, .rentalQueriesContainer {
+  margin: 0px auto;
+}
