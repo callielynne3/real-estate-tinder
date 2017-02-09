@@ -7,11 +7,12 @@ export default class MyRentals extends React.Component {
 
   renderRentals() {
     return this.props.rentals.map((rental) => {
+
       return (
-        <div key={rental.id} className="">
+        <div key={rental.id} className="five wide column">
           <div className="ui card">
             <div className="image">
-              <img src="http://semantic-ui.com/images/avatar2/large/elyse.png" />
+              <img src={rental.pictures[0]} />
             </div>
             <div className="content">
               <div className="header">{rental.title}</div>
@@ -24,15 +25,15 @@ export default class MyRentals extends React.Component {
             </div>
             <div className="extra content">
               <span className="right floated">
-                Posted on 
+                Posted by {rental.rentor.email}
               </span>
               <span>
                 <i className="user icon"></i>
-                Posted by {rental.ret}
+                Posted on {rental.created_at}
               </span>
             </div>
           </div>
-        </div>
+        </div>  
       );
     });
   }
@@ -41,7 +42,9 @@ export default class MyRentals extends React.Component {
     return (
        <div>
         <h1>My Rentals</h1>
-        {this.renderRentals()}
+        <div className="ui grid container stackable">
+          {this.renderRentals()}
+        </div>
       </div>
     );
   }

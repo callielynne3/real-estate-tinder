@@ -10,6 +10,10 @@ class Rental < ApplicationRecord
   validates_integrity_of  :pictures
   validates_processing_of :pictures
 
+  geocoded_by :address
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :geocode, :reverse_geocode
+
   private
     def picture_size_validation
       errors[:picture] << "should be less than 500KB" if pictures.size > 0.5.megabytes
