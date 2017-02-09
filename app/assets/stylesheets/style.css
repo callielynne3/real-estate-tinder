@@ -2,12 +2,25 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.main-content {
+  margin-top: 70px;
+}
+
+nav {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+
 nav img {
   display: inline;
 }
 
 nav h1 {
   margin: 0px;
+  font-size: 20px;
   padding-top: 5px;
   display: inline;
   font-weight: 100;
@@ -15,6 +28,20 @@ nav h1 {
 
 nav #the-o {
   font-weight: 400;
+}
+
+.nav-left-mobile, .nav-right-mobile {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .nav-left-mobile, .nav-right-mobile {
+    display: inline-block !important;
+  }
+
+  .nav-desktop {
+    display: none !important;
+  }
 }
 
 .form_field{
