@@ -11,7 +11,7 @@ export default class MyVotes extends React.Component {
         <div key={vote.id} className="five wide column">
           <div className="ui card">
             <div className="image">
-              <img src="http://lorempixel.com/400/200/" />
+              <img src={vote.rental.pictures[0]} />
             </div>
             <div className="content">
               <div className="header">{vote.rental.title}</div>
