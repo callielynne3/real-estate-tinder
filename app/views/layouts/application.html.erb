@@ -7,15 +7,29 @@
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>" async defer></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render partial: '/site/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <div class="main-content">
+      <div class="ui container">
+        <% if notice %>
+        <div class="ui positive message">
+          <i class="close icon"></i>
+          <div class="header notice"><%= notice %></div>
+        </div>
+        <% end %>
+
+        <% if alert %>
+        <div class="ui negative message">
+          <i class="close icon"></i>
+          <div class="header notice"><%= alert %></div>
+        </div>
+        <% end %>
+      </div>
       <%= yield %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </div>
   </body>
 </html>

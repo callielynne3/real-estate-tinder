@@ -4,6 +4,16 @@ $(document).on('turbolinks:load', function() {
     .dropdown()
   ;
 
+  $('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
+
+// NAV SCROLL RESPONSE
   $(window).scroll(
       {
           previousTop: 0
@@ -22,5 +32,4 @@ $(document).on('turbolinks:load', function() {
     }, 100)
 
   });
-
 });

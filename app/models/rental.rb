@@ -10,6 +10,10 @@ class Rental < ApplicationRecord
   validates_integrity_of  :pictures
   validates_processing_of :pictures
 
+
+  # Rental Validation
+  validates :title, :property_type, :address, :price, :beds, presence: true
+
   #Use Geocoder to find lat/lng
   geocoded_by :address
   reverse_geocoded_by :latitude, :longitude

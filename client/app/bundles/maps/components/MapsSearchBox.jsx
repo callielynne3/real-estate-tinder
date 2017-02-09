@@ -142,7 +142,7 @@ export default class SearchBoxExample extends Component {
       <div>
         <SearchBoxExampleGoogleMap
           containerElement={
-            <div style={{ height: `30vh` }} />
+            <div style={{ height: `50vh` }} />
           }
           mapElement={
             <div style={{ height: `50vh` }} />
