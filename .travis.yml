@@ -17,7 +17,8 @@ before_script:
   - RAILS_ENV=test bin/rails db:migrate --trace
 
 before_install:
-  - gem update bundler
+  - gem install bundler && gem update bundler
+  - bundle install --jobs=3 --retry=3 --path=${BUNDLE_PATH:-vendor/bundle}
 
 script:
   - bin/rails db:migrate --trace
@@ -26,6 +27,7 @@ script:
 cache:
   bundler: true
   directories:
+    - vendor/bundle
     - node_modules
     - client/node_modules
 
