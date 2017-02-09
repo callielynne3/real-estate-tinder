@@ -12,10 +12,22 @@
 
   <body>
     <%= render partial: '/site/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div class="main-content">
-      <%= yield %>
+
+    <div class="ui container">
+      <% if notice %>
+        <div class="ui positive message">
+          <i class="close icon"></i>
+          <div class="header notice"><%= notice %></div>
+        </div>
+      <% end %>
+
+      <% if alert %>
+        <div class="ui negative message">
+          <i class="close icon"></i>
+          <div class="header notice"><%= alert %></div>
+        </div>
+      <% end %>
     </div>
+    <%= yield %>
   </body>
 </html>

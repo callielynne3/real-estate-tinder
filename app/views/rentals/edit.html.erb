@@ -1,0 +1,13 @@
+<div class="ui three column grid">
+  <div class="five wide column"></div>
+  <div class="six wide column">
+    <div class="column">
+      <div class="ui segment">
+        <% @rental.pictures.each do |picture| %>
+          <%= image_tag(picture.url) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="five wide column"></div>
+</div>

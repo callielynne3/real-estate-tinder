@@ -2,14 +2,21 @@
 #posted AND queried by user
 
 class RentalsController < ApplicationController
+  before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:show]
   skip_before_filter  :verify_authenticity_token
-
-  # #list all rentals on the site
-  # 	def index
-  # 	end
 
   def my_votes
     @user = current_user
+    # array of vote.rental_ids where the votes are "likes" (positive votes)
+    @rental_ids = @user.votes.where(vote: 1).pluck(:rental_id)
+
+    @rentals = []
+
+    @rental_ids.each do |rental_id|
+      @rentals << Rental.find(rental_id)
+    end
+
     @votes = @user.votes.where(vote: 1).as_json(include: { rental: { include: { rentor: { only: [:email] } } } })
   end
 
@@ -33,16 +40,16 @@ class RentalsController < ApplicationController
     else
       render 'new'
     end
-
   end
 
   def show
     @rental = Rental.find_by(id: params[:id])
   end
 
-  # #user gets form to edit their posted rental
-  # 	def edit
-  # 	end
+  #user gets form to edit their posted rental
+  def edit
+    @rental = Rental.find_by(id: params[:id])
+  end
 
   # #user edits their posted rental
   # 	def update
@@ -69,7 +76,7 @@ class RentalsController < ApplicationController
   private
 
   def rental_params
-    params.require(:rental).permit(:title, :property_type, :address, :unit, :price, :beds, :baths, :pets, :parking, :description, :pictures_cache, pictures: [])
+    params.require(:rental).permit(:title, :property_type, :address, :unit, :price, :beds, :baths, :pets, :parking, :description, :pictures_cache, :remove_pictures, pictures: [])
   end
 
 end
