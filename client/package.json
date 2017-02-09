@@ -10,7 +10,7 @@
     "build:test": "webpack --config webpack.config.js",
     "build:production": "NODE_ENV=production webpack --config webpack.config.js",
     "build:development": "webpack -w --config webpack.config.js",
-    "postinstall": "RAILS_ENV=production bundle exec rake assets:precompile && cd semantic && gulp build"
+    "postinstall": "RAILS_ENV=production rails assets:precompile && cd semantic && gulp build"
   },
   "cacheDirectories": ["node_modules", "client/node_modules"],
   "dependencies": {
