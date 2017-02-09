@@ -6,6 +6,10 @@
   margin-top: 70px;
 }
 
+.the-google-map {
+  margin-top: -70px;
+}
+
 nav {
   position: fixed;
   z-index: 1000;

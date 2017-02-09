@@ -136,7 +136,7 @@ export default class SearchBoxExample extends Component {
 
   render() {
     return (
-      <div>
+      <div className="the-google-map">
         <SearchBoxExampleGoogleMap
           containerElement={
             <div style={{ height: `30vh` }} />

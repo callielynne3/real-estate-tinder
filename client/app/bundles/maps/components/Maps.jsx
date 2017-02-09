@@ -29,12 +29,12 @@ export default class SimpleMapExample extends Component {
       <SimpleMapExampleGoogleMap
         containerElement={
           <div style={{ 
-            height: `0vw` 
+            height: `0vw`
           }} />
         }
         mapElement={
-          <div style={{ 
-            height: `0vh` 
+          <div style={{
+            height: `0vh`
           }} />
         }
       />

@@ -1,9 +1,6 @@
 $(document).on('turbolinks:load', function() {
-// SEMANTIC UI
-  $('.ui.dropdown')
-    .dropdown()
-  ;
-
+  attachSemanticUI()
+  accomodateHomePageMap()
   $(window).scroll(
       {
           previousTop: 0
@@ -22,5 +19,11 @@ $(document).on('turbolinks:load', function() {
     }, 100)
 
   });
-
 });
+
+function attachSemanticUI () {
+    $('.ui.dropdown')
+      .dropdown()
+    ;
+  }
+}
