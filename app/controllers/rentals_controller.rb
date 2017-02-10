@@ -4,7 +4,7 @@
 class RentalsController < ApplicationController
   skip_before_action  :verify_authenticity_token
   before_action :authenticate_user!
-  skip_before_action :authenticate_user!, only: [:show]
+  skip_before_action :authenticate_user!, only: [:show, :browse]
 
 
   def my_votes

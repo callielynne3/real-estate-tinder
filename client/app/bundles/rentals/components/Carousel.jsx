@@ -7,7 +7,7 @@ export default class Carousel extends React.Component {
   }
 
   renderRentals() {
-    return this.props.rentors.map((rental) => {
+    return this.props.rentals.map((rental) => {
 
       return (
         <div key={rental.id} className="ui card">
@@ -25,7 +25,7 @@ export default class Carousel extends React.Component {
           </div>
           <div className="extra content">
             <span className="right floated">
-              Posted by {rental.rentor.email}
+              Posted by
             </span>
             <span>
               <i className="user icon"></i>
