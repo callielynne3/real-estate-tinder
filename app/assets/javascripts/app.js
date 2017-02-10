@@ -4,6 +4,12 @@ $(document).on('turbolinks:load', function() {
     .dropdown()
   ;
 
+console.log("hello");
+
+//   $('.select')
+//   .dropdown()
+// ;
+
   $('.message .close')
   .on('click', function() {
     $(this)
@@ -12,6 +18,8 @@ $(document).on('turbolinks:load', function() {
     ;
   })
 ;
+
+
 
 // NAV SCROLL RESPONSE
   $(window).scroll(
