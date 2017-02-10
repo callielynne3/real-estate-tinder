@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import ReactSwipe from 'react-swipe';
+
 
 export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  next() {
+    this.refs.reactSwipe.next();
+  }
+
+  prev() {
+    this.refs.reactSwipe.prev();
   }
 
   renderRentals() {
@@ -12,7 +22,7 @@ export default class Carousel extends React.Component {
       return (
         <div key={rental.id} className="ui card">
           <div className="ui image">
-            <img src="http://lorempixel.com/400/200" />
+            <img src={rental.pictures[0]} />
           </div>
           <div className="content">
             <div className="header">{rental.title}</div>
@@ -40,10 +50,17 @@ export default class Carousel extends React.Component {
 
   render() {
     return (
-      <div className="ui stackable grid container">
-        <ReactSwipe className="carousel" swipeOptions={{continuous: false, auto: 25}}>
+      <div className="center">
+        <ReactSwipe ref="reactSwipe" swipeOptions={{continuous: true }}>
           {this.renderRentals()}
         </ReactSwipe>
+        <div className="ui center aligned container">
+          <div className="ui large buttons">
+            <button className="ui button" onClick={::this.prev}>Dislike</button>
+              <div className="or"></div>
+            <button className="ui button" onClick={::this.next}>Like</button>
+          </div>
+        </div>
       </div>
     );
   }
