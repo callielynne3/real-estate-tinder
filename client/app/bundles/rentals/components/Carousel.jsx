@@ -20,7 +20,7 @@ export default class Carousel extends React.Component {
     return this.props.rentals.map((rental) => {
 
       return (
-        <div key={rental.id} className="ui card">
+        <div key={rental.id} className="ui card something">
           <div className="ui image">
             <img src={rental.pictures[0]} />
           </div>
@@ -50,8 +50,8 @@ export default class Carousel extends React.Component {
 
   render() {
     return (
-      <div className="center">
-        <ReactSwipe ref="reactSwipe" swipeOptions={{continuous: true }}>
+      <div className="center your-daddy">
+        <ReactSwipe ref="reactSwipe" className="swipeable" swipeOptions={{continuous: true }}>
           {this.renderRentals()}
         </ReactSwipe>
         <div className="ui center aligned container">

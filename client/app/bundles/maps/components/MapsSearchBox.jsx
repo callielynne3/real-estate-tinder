@@ -227,7 +227,7 @@ export default class SearchBoxExample extends Component {
             <div style={{ height: `50vh` }} />
           }
           mapElement={
-            <div style={{ height: `50vh` }} />
+            <div className="mappy" style={{ height: `50vh` }} />
           }
           center={this.state.center}
           content={this.state.content}
@@ -250,7 +250,7 @@ export default class SearchBoxExample extends Component {
               <option value="medium">$3,000 - $4,000</option>
               <option value="high">more than $4,000</option>
             </select>
-            <button onClick={this.handleSubmit} style={{ zIndex: '9999' }}>
+            <button onClick={this.handleSubmit}>
               Search
             </button>
           </div>
