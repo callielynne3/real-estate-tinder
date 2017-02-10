@@ -1,43 +1,40 @@
-<div class="ui three column grid">
-  <div class="five wide column"></div>
-  <div class="six wide column">
-    <h2>Log in</h2>
+<div class="ui middle aligned center aligned grid">
+  <div class="twelve wide column">
+    <h2 class="ui header">Log in</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "ui big form"}) do |f| %>
-    <div class="field">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
+
+    <div class="ui segment">
+
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, placeholder: "Enter email" %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Enter password" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Log in", class: "ui fluid big submit button"%>
+      </div>
+      <br>
+
+      <% if devise_mapping.rememberable? -%>
+      <div class="ui checkbox">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <% end -%>
+
     </div>
-
-    <div class="field">
-      <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-
-    <div class="actions">
-      <%= f.submit "Log in", class: "fluid ui big blue button"%>
-    </div>
-
-
-
-    <% if devise_mapping.rememberable? -%>
-    <div class="remember">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-    <% end -%>
     <% end %>
     <h4 class="ui horizontal divider">
       OR
     </h4>
-
-    <a href="/users/auth/google_oauth2" class="fluid ui big red button">
-      <i class="google plus icon"></i> Sign up with google.
+    <a href="/users/auth/google_oauth2" class="fluid ui big google button">
+      <i class="google plus icon"></i> Continue using Google
     </a>
-
+  </div>
 
     <%# render "devise/shared/links" %>
-  </div>
-  <div class="five wide column"></div>
 </div>

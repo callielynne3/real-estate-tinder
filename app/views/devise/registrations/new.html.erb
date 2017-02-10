@@ -11,47 +11,47 @@
   </div>
 <% end %>
 
-<div class="ui three column grid">
-  <div class="five wide column"></div>
-  <div class="six wide column">
-
-    <h2>Sign up</h2>
+<div class="ui middle aligned center aligned grid">
+  <div class="twelve wide column">
+    <h2 class="ui left aligned header">Sign up</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {class: "ui big form"})  do |f| %>
+    <div class="ui left aligned segment">
 
-    <div class="required field">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+      <div class="required field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
 
-    <div class="required field">
-      <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+      <div class="required field">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
-    <div class="required field">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
+      <div class="required field">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
 
-    <div class="field">
-      <%= f.label :picture %>
-      <%= f.file_field :picture %>
-      <%= f.hidden_field :picture_cache %>
-    </div>
+      <div class="field">
+        <%= f.label :picture %>
+        <%= f.file_field :picture %>
+        <%= f.hidden_field :picture_cache %>
+      </div>
 
-    <div class="actions">
-      <%= f.submit "Sign up", class: "fluid ui big blue button"%>
+      <div class="actions">
+        <%= f.submit "Sign up", class: "ui fluid big submit button"%>
+      </div>
     </div>
     <% end %>
+
     <h4 class="ui horizontal divider">
       OR
     </h4>
-
-    <a href="/users/auth/google_oauth2" class="fluid ui big red button">
-      <i class="google plus icon"></i> Sign up with google.
+    <a href="/users/auth/google_oauth2" class="fluid ui big google button">
+      <i class="google plus icon"></i> Continue using Google
     </a>
-
-
   </div>
+
+    <%# render "devise/shared/links" %>
 </div>

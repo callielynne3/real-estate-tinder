@@ -172,3 +172,8 @@ div [title="Show street map"]{
 .something {
   margin: 0px 1px;
 }
+
+.google {
+  background-color: #DC4E41 !important;
+  color: white !important;
+}

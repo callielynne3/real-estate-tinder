@@ -9,7 +9,7 @@
   "scripts": {
     "postinstall": "cd client && npm install",
     "assets": "RAILS_ENV=production rails assets:precompile",
-    "rails-server": "echo 'visit http://localhost:3000/hello_world' && foreman start -f Procfile.dev",
+    "rails-server": "echo 'visit http://localhost:3000' && foreman start -f Procfile.dev",
     "test": "rspec"
   },
   "cacheDirectories": [
