@@ -26,7 +26,7 @@ export default class RentalForm extends React.Component {
               <div className="fields">
                 <div className="required eight wide field">
                   <label htmlFor="rental[address]">Address: </label>
-                  <input type="text" name="rental[address]" />
+                  <input id="searchTextField" type="text" name="rental[address]" />
                 </div>
 
                 <div className="three wide field">
