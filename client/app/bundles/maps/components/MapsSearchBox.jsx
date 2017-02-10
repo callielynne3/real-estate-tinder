@@ -57,7 +57,7 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
       bounds={props.bounds}
       controlPosition={google.maps.ControlPosition.CENTER}
       onPlacesChanged={props.onPlacesChanged}
-      inputPlaceholder="Find your new Hôm"
+      inputPlaceholder="Find your new Hōm"
       inputStyle={INPUT_STYLE}
     />
     {props.center && (
@@ -190,6 +190,7 @@ export default class SearchBoxExample extends Component {
     });
   }
 
+
   handlePropertyTypeChange(e) {
     this.setState({
       propertyType: e.target.value,
@@ -215,9 +216,14 @@ export default class SearchBoxExample extends Component {
       }
     }).done(function(response) {
       // Render a list of search-appropriate rentals as cards
-      console.log(response)
-    });
+      // console.log(response)
+      console.log(response[0].address)
+      console.log(renderRentals(response[0]))
+
+    })
+
   }
+
 
   render() {
     return (
@@ -272,4 +278,4 @@ export default class SearchBoxExample extends Component {
       </div>
     );
   }
-}
+
