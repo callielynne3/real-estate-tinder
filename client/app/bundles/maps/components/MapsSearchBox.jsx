@@ -57,7 +57,7 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
       bounds={props.bounds}
       controlPosition={google.maps.ControlPosition.CENTER}
       onPlacesChanged={props.onPlacesChanged}
-      inputPlaceholder="Find your new Hōm"
+      inputPlaceholder="Find your new Hôm"
       inputStyle={INPUT_STYLE}
     />
     {props.center && (
@@ -190,7 +190,6 @@ export default class SearchBoxExample extends Component {
     });
   }
 
-
   handlePropertyTypeChange(e) {
     this.setState({
       propertyType: e.target.value,
@@ -216,14 +215,9 @@ export default class SearchBoxExample extends Component {
       }
     }).done(function(response) {
       // Render a list of search-appropriate rentals as cards
-      // console.log(response)
-      console.log(response[0].address)
-      console.log(renderRentals(response[0]))
-
-    })
-
+      console.log(response)
+    });
   }
-
 
   render() {
     return (
@@ -246,36 +240,21 @@ export default class SearchBoxExample extends Component {
           markers={this.state.markers}
         />
           <div className="rentalQueries">
-
-            <select
-              multiple=""
-              id="propertyType"
-
-              name="skills"
-              className="ui normal dropdown select"
-              onChange={this.handlePropertyTypeChange}>
-
-                <option value="apartment">Studio/Apartment</option>
-                <option value="room">Room</option>
+            <select id="propertyType" onChange={this.handlePropertyTypeChange}>
+              <option value="apartment">Studio/Apartment</option>
+              <option value="room">Room</option>
             </select>
-
-            <select
-              id="priceRange"
-              onChange={this.handlePriceRangeChange}
-              name="skills"
-              className="ui normal dropdown select">
-
+            <select id="priceRange" onChange={this.handlePriceRangeChange}>
               <option value="lowest">less than $1,000</option>
               <option value="low">$1,000 - $2,000</option>
               <option value="medium">$3,000 - $4,000</option>
               <option value="high">more than $4,000</option>
             </select>
-
-            <button onClick={this.handleSubmit}>
+            <button onClick={this.handleSubmit} style={{ zIndex: '9999' }}>
               Search
             </button>
           </div>
       </div>
     );
   }
-
+}
