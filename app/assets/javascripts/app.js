@@ -1,43 +1,35 @@
 $(document).on('turbolinks:load', function() {
-// SEMANTIC UI
-  $('.ui.dropdown')
-    .dropdown()
-  ;
 
-console.log("hello");
+  // SEMANTIC UI
+  $('.ui.dropdown').dropdown();
+  $('select.dropdown').dropdown();
+  $('.ui.checkbox').checkbox();
+  $('.ui.radio.checkbox').checkbox();
 
-//   $('.select')
-//   .dropdown()
-// ;
-
-  $('.message .close')
-  .on('click', function() {
+  $('.message .close').on('click', function() {
     $(this)
-      .closest('.message')
-      .transition('fade')
+    .closest('.message')
+    .transition('fade')
     ;
-  })
-;
+  });
 
-
-
-// NAV SCROLL RESPONSE
+  // NAV SCROLL RESPONSE
   $(window).scroll(
-      {
-          previousTop: 0
-      },
-      function () {
-      var currentTop = $(window).scrollTop();
-      setTimeout(function() {
+  {
+    previousTop: 0
+  },
+  function () {
+    var currentTop = $(window).scrollTop();
+    setTimeout(function() {
       if (currentTop < this.previousTop - 5 ) {
-          // $(".sidebar em").text("Up");
-          $("nav").show();
+        // $(".sidebar em").text("Up");
+        $("nav").show();
       } else if (currentTop > this.previousTop + 5) {
-          // $(".sidebar em").text("Down");
-          $("nav").hide();
+        // $(".sidebar em").text("Down");
+        $("nav").hide();
       }
       this.previousTop = currentTop;
     }, 100)
-
   });
+
 });
