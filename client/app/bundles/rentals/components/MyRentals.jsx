@@ -33,7 +33,7 @@ export default class MyRentals extends React.Component {
               </span>
             </div>
           </div>
-        </div>  
+        </div>
       );
     });
   }

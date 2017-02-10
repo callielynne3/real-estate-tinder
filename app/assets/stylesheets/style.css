@@ -1,13 +1,13 @@
-* {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
 .main-content {
   margin-top: 70px;
 }
 
 .the-google-map {
   margin-top: -70px;
+}
+
+.nav-color {
+  background-color: #334355 !important;
 }
 
 nav {
@@ -18,8 +18,16 @@ nav {
   left: 0px;
 }
 
-nav img {
+nav .hom-logo img {
+  margin-left: 40px !important;
   display: inline;
+  height: 40px;
+}
+
+nav .hom-text img {
+  display: inline;
+  height: 20px;
+  margin-left: 10px
 }
 
 nav h1 {
@@ -36,6 +44,15 @@ nav #the-o {
 
 .nav-left-mobile, .nav-right-mobile {
   display: none !important;
+  background-color: #334355 !important;
+}
+
+.nav-left-mobile i, .nav-right-mobile i {
+  color: white;
+}
+
+.right-dropdown {
+  margin-right: 50px !important;
 }
 
 @media (max-width: 800px) {
@@ -103,37 +120,6 @@ div [title="Show street map"]{
 .gmnoprint {
   display: none;
 }
-
-
-/*Styling queries on Welcome page*/
-/*.rentalQueriesContainer {
-  display: flex;
-}
-
-.rentalQueries {
-  margin: 0px auto;
-}
-
-.rentalQueries select {
-  display: inline;
-  boxSizing: border-box;
-  MozBoxSizing: border-box;
-  border: 1px solid transparent;
-  width: 24vh;
-  height: 10vh;
-  marginTop: 0px;
-  padding: 0 12px;
-  borderRadius: 5px;
-  boxShadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-  fontSize: 120px;
-  outline: none;
-  textOverflow: ellipses;
-  background: navy;
-  color: white;
-  opacity: 0.5;
-  margin-right: 2px;
-  margin-left: 2px;
-}*/
 
 .rentalQueries, .rentalQueriesContainer, .rentalQueries > select {
   z-index: 9999;

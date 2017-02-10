@@ -2,4 +2,13 @@
   <%= react_component 'MapsSearchBox'%>
 </div>
 
-<%= react_component 'Carousel', props: { rentals: @rentals }, prerender: false %>
+<br />
+<br />
+<br />
+<br />
+
+<%= react_component 'Carousel', props: { rentals: @rentals, rentors: @rentors }, prerender: false %>
+
+<div class="the-browse">
+  <%= react_component 'Browse'%>
+</div>
