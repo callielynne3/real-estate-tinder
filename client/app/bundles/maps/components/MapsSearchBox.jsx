@@ -57,7 +57,7 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
       bounds={props.bounds}
       controlPosition={google.maps.ControlPosition.CENTER}
       onPlacesChanged={props.onPlacesChanged}
-      inputPlaceholder="Find your new Hôm"
+      inputPlaceholder="Find your new Hōm"
       inputStyle={INPUT_STYLE}
     />
     {props.center && (
