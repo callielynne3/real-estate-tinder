@@ -134,18 +134,13 @@ export default class SearchBoxExample extends Component {
     }).done(function(response) {
       // Render a list of search-appropriate rentals as cards
       // console.log(response)
-      console.log(response)
-
+      console.log(response[0].address)
+      console.log(renderRentals(response[0]))
 
     })
 
   }
 
-  componentWillMount() {
-    $.get(this.props.url, function (data) {
-      this.setState(data);
-    }.bind(this));
-  },
 
   render() {
     return (
@@ -185,4 +180,33 @@ export default class SearchBoxExample extends Component {
   }
 }
 
+var renderRentals = function(rental) {
+      return (
+        <div key={rental.id} className="five wide column">
+          <div className="ui card">
+            <div className="image">
+              <img src={rental.pictures[0]} />
+            </div>
+            <div className="content">
+              <div className="header">{rental.title}</div>
+              <div className="meta">
+                <a>{rental.address}</a>
+              </div>
+              <div className="description">
+                {rental.property_type}
+              </div>
+            </div>
+            <div className="extra content">
+              <span className="right floated">
+                Posted by 
+              </span>
+              <span>
+                <i className="user icon"></i>
+                Posted on {rental.created_at}
+              </span>
+            </div>
+          </div>
+        </div>  
+      );
+  }
 

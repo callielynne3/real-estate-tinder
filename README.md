@@ -34,8 +34,9 @@ foreman start -f Procfile.dev
 
 ## Contributors
 
-* Ibraheem Abdul-Malik - [@ibraheem4](https://github.com/ibraheem4)
-* Candace Lazarou - [@cclazarou](https://github.com/cclazarou)
-* Eric O'Rear - [@ejoreo](https://github.com/ejoreo)
-* Jonah Price - [@jyonah](https://github.com/jyonah)
-* Callie Tomlinson - [@callielynne3](https://github.com/callielynne3)
+ + _Ibraheem Abdul-Malik_ - [@ibraheem4](https://github.com/ibraheem4)
+ + _Candace Lazarou_ - [@cclazarou](https://github.com/cclazarou)
+ + _Eric O'Rear_ - [@ejoreo](https://github.com/ejoreo)
+ + _Jonah Price_ - [@jyonah](https://github.com/jyonah)
+ + _Callie Tomlinson_ - [@callielynne3](https://github.com/callielynne3)
+
