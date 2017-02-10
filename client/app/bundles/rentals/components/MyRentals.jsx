@@ -29,7 +29,7 @@ export default class MyRentals extends React.Component {
               </span>
               <span>
                 <i className="user icon"></i>
-                Posted on {rental.created_at}
+                Posted on {rental.created_at.slice(0, 10)}
               </span>
             </div>
           </div>
