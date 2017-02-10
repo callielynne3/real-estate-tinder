@@ -3,7 +3,7 @@
 </div>
 
 <div class="carousel-container">
-  <div class="rental-card-carousel">
+  <div class="rental-card-carousel dont-show">
     <%= react_component 'Carousel', props: { rentals: @rentals, rentors: @rentors, rentalLink: new_rental_path }, prerender: false %>
   </div>
 <%= render 'about' %>
