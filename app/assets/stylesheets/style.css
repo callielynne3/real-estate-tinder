@@ -10,6 +10,10 @@
   margin-top: -70px;
 }
 
+.nav-color {
+  background-color: #334355 !important;
+}
+
 nav {
   position: fixed;
   z-index: 1000;
@@ -18,8 +22,16 @@ nav {
   left: 0px;
 }
 
-nav img {
+nav .hom-logo img {
+  margin-left: 40px !important;
   display: inline;
+  height: 40px;
+}
+
+nav .hom-text img {
+  display: inline;
+  height: 20px;
+  margin-left: 10px
 }
 
 nav h1 {
@@ -36,6 +48,15 @@ nav #the-o {
 
 .nav-left-mobile, .nav-right-mobile {
   display: none !important;
+  background-color: #334355 !important;
+}
+
+.nav-left-mobile i, .nav-right-mobile i {
+  color: white;
+}
+
+.right-dropdown {
+  margin-right: 50px !important;
 }
 
 @media (max-width: 800px) {
