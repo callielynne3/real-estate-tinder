@@ -62,8 +62,8 @@ export default class SearchBoxExample extends Component {
       lng: -122.4194,
     },
     markers: [],
-    priceRange: 'lowest', 
-    propertyType: 'apartment',   
+    priceRange: 'lowest',
+    propertyType: 'apartment',
   };
 
   handleMapMounted = this.handleMapMounted.bind(this);
@@ -127,7 +127,7 @@ export default class SearchBoxExample extends Component {
       method: 'get',
       data: {
         address,
-        priceRange, 
+        priceRange,
         propertyType,
       }
     }).done(function(response) {
@@ -156,16 +156,31 @@ export default class SearchBoxExample extends Component {
           markers={this.state.markers}
         />
           <div className="rentalQueries">
-            <select id="propertyType" onChange={this.handlePropertyTypeChange}>
-              <option value="apartment">Studio/Apartment</option>
-              <option value="room">Room</option>
+
+            <select
+              multiple=""
+              id="propertyType"
+
+              name="skills"
+              className="ui normal dropdown select"
+              onChange={this.handlePropertyTypeChange}>
+
+                <option value="apartment">Studio/Apartment</option>
+                <option value="room">Room</option>
             </select>
-            <select id="priceRange" onChange={this.handlePriceRangeChange}>
+
+            <select
+              id="priceRange"
+              onChange={this.handlePriceRangeChange}
+              name="skills"
+              className="ui normal dropdown select">
+
               <option value="lowest">less than $1,000</option>
               <option value="low">$1,000 - $2,000</option>
               <option value="medium">$3,000 - $4,000</option>
               <option value="high">more than $4,000</option>
             </select>
+
             <button onClick={this.handleSubmit} style={{ zIndex: '9999' }}>
               Search
             </button>
