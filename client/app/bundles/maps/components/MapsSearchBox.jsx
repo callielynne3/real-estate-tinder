@@ -204,8 +204,8 @@ export default class SearchBoxExample extends Component {
 
   handleSubmit() {
     // const { address, priceRange, propertyType } = this.state;
-
-    console.log('testing')
+    $('.about-text').addClass('dont-show');
+    $('.rental-card-carousel').removeClass('dont-show');
     
 
     // $.ajax({

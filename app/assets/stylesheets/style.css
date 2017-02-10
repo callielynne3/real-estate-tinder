@@ -162,21 +162,23 @@ div [title="Show street map"]{
 .carousel-container {
   padding: 30px 0px;
   background-color: #334355 !important;
+  overflow: hidden;
+  position: relative;
 }
 
 .swipeable {
   display: inline;
-  /*width: 102%;*/
-}
-
-.rental-card-carousel {
-  display: none;
 }
 
 .carousel-container .about-text {
   color: white;
   margin: 0px auto;
-  max-width: 70%
+  max-width: 70%;
+}
+
+.dont-show {
+  position: absolute;
+  right: -500000px;
 }
 
 .carousel-container .about-text *{
