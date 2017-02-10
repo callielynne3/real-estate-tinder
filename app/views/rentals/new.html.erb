@@ -1,3 +1,14 @@
+<script>
+var ready;
+ready = function() {
+    var input = document.getElementById('locationTextField');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+  }
+$(document).ready(ready);
+$(document).on('turbolinks:load', ready);
+google.maps.event.addDomListener(window, 'load', init);
+</script>
+
 <div class="ui container">
   <h1 class="ui header" id="form-prompt">What kind of place would you like to list?</h1>
 
@@ -10,8 +21,3 @@
 <% end %>
 
 <%= react_component 'RentalFormApp' %>
-
-
-
-
-

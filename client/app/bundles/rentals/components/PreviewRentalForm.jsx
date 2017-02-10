@@ -13,6 +13,7 @@ export default class PreviewRentalForm extends React.Component {
     return this.props.pictures.map((picture) => {
       return (
         <div key={picture.file}>
+          console.log(picture)
           <img src={picture.url} />
         </div>
       );

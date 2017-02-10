@@ -16,7 +16,7 @@ export default class RentalForm extends React.Component {
       <div className="RentalFormContainer">
         <div className="ui container">
 
-            <form action="/preview" method="post" encType="multipart/form-data" className="ui big form">
+            <form action="/rentals" method="post" encType="multipart/form-data" className="ui big form">
 
                 <div className="required field">
                   <label htmlFor="rental[title]">Title: </label>
@@ -26,7 +26,7 @@ export default class RentalForm extends React.Component {
               <div className="fields">
                 <div className="required eight wide field">
                   <label htmlFor="rental[address]">Address: </label>
-                  <input type="text" name="rental[address]" />
+                  <input id="searchTextField" type="text" name="rental[address]" />
                 </div>
 
                 <div className="three wide field">

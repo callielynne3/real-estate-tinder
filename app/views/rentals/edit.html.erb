@@ -3,8 +3,10 @@
   <div class="six wide column">
     <div class="column">
       <div class="ui segment">
-        <% @rental.pictures.each do |picture| %>
-          <%= image_tag(picture.url) %>
+        <% if @rental.pictures.any? %>
+          <% @rental.pictures.each do |picture| %>
+            <%= image_tag(picture.url) %>
+          <% end %>
         <% end %>
       </div>
     </div>

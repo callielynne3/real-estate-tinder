@@ -1,4 +1,9 @@
 /* global google */
+
+import canUseDOM from "can-use-dom";
+
+import raf from "raf";
+
 import {
   default as React,
   Component,
@@ -8,7 +13,19 @@ import {
   withGoogleMap,
   GoogleMap,
   Marker,
+  Circle,
+  InfoWindow,
 } from "react-google-maps/lib";
+
+const geolocation = (
+  canUseDOM && navigator.geolocation ?
+  navigator.geolocation :
+  ({
+    getCurrentPosition(success, failure) {
+      failure(`Your browser doesn't support geolocation.`);
+    },
+  })
+);
 
 import SearchBox from "react-google-maps/lib/places/SearchBox";
 
@@ -43,6 +60,24 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
       inputPlaceholder="Find your new Hôm"
       inputStyle={INPUT_STYLE}
     />
+    {props.center && (
+      <InfoWindow position={props.center}>
+        <div>{props.content}</div>
+      </InfoWindow>
+    )}
+    {props.center && (
+      <Circle
+        center={props.center}
+        radius={props.radius}
+        options={{
+          fillColor: `red`,
+          fillOpacity: 0.20,
+          strokeColor: `red`,
+          strokeOpacity: 1,
+          strokeWeight: 1,
+        }}
+      />
+    )}
     {props.markers.map((marker, index) => (
       <Marker position={marker.position} key={index} />
     ))}
@@ -56,15 +91,62 @@ const SearchBoxExampleGoogleMap = withGoogleMap(props => (
  */
 export default class SearchBoxExample extends Component {
   state = {
+    center: null,
+    content: "Locating.",
     bounds: null,
     center: {
       lat: 37.7749,
       lng: -122.4194,
     },
     markers: [],
-    priceRange: 'lowest', 
-    propertyType: 'apartment',   
+    priceRange: 'lowest',
+    propertyType: 'apartment',
+    rentals: []
   };
+
+  isUnmounted = false;
+
+  componentDidMount() {
+    const tick = () => {
+      if (this.isUnmounted) {
+        return;
+      }
+      this.setState({ radius: Math.max(this.state.radius - 20, 0) });
+
+      if (this.state.radius > 200) {
+        raf(tick);
+      }
+    };
+    geolocation.getCurrentPosition((position) => {
+      if (this.isUnmounted) {
+        return;
+      }
+      this.setState({
+        center: {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        },
+        content: `Location found.`,
+      });
+
+      raf(tick);
+    }, (reason) => {
+      if (this.isUnmounted) {
+        return;
+      }
+      this.setState({
+        center: {
+          lat: 37.7749,
+          lng: -122.4194,
+        },
+        content: `Error: The Geolocation service failed (${reason}).`,
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.isUnmounted = true;
+  }
 
   handleMapMounted = this.handleMapMounted.bind(this);
   handleBoundsChanged = this.handleBoundsChanged.bind(this);
@@ -103,7 +185,8 @@ export default class SearchBoxExample extends Component {
     this.setState({
       center: mapCenter,
       markers,
-      address: places[0].formatted_address
+      address: places[0].formatted_address,
+
     });
   }
 
@@ -128,7 +211,7 @@ export default class SearchBoxExample extends Component {
       method: 'get',
       data: {
         address,
-        priceRange, 
+        priceRange,
         propertyType,
       }
     }).done(function(response) {
@@ -153,6 +236,8 @@ export default class SearchBoxExample extends Component {
             <div style={{ height: `50vh` }} />
           }
           center={this.state.center}
+          content={this.state.content}
+          radius={this.state.radius}
           onMapMounted={this.handleMapMounted}
           onBoundsChanged={this.handleBoundsChanged}
           onSearchBoxMounted={this.handleSearchBoxMounted}
@@ -178,35 +263,5 @@ export default class SearchBoxExample extends Component {
       </div>
     );
   }
-}
 
-var renderRentals = function(rental) {
-      return (
-        <div key={rental.id} className="five wide column">
-          <div className="ui card">
-            <div className="image">
-              <img src={rental.pictures[0]} />
-            </div>
-            <div className="content">
-              <div className="header">{rental.title}</div>
-              <div className="meta">
-                <a>{rental.address}</a>
-              </div>
-              <div className="description">
-                {rental.property_type}
-              </div>
-            </div>
-            <div className="extra content">
-              <span className="right floated">
-                Posted by 
-              </span>
-              <span>
-                <i className="user icon"></i>
-                Posted on {rental.created_at}
-              </span>
-            </div>
-          </div>
-        </div>  
-      );
-  }
 

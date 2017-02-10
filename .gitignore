@@ -27,3 +27,5 @@ node_modules
 
 /public/uploads/
 public/uploads
+
+app/assets/stylesheets/dist/
