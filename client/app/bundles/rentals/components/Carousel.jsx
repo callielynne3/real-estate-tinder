@@ -16,6 +16,7 @@ export default class Carousel extends React.Component {
           </div>
           <div className="content">
             <div className="header">{rental.title}</div>
+            <a href="/rentals/1">See More Details</a>
             <div className="meta">
               <a>{rental.address}</a>
             </div>

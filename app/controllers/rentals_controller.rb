@@ -45,12 +45,12 @@ class RentalsController < ApplicationController
   end
 
   def show
-    @rental = Rental.find_by(id: params[:id])
+    @rental = Rental.find(params[:id])
   end
 
   #user gets form to edit their posted rental
   def edit
-    @rental = Rental.find_by(id: params[:id])
+    @rental = Rental.find(params[:id])
   end
 
   # #user edits their posted rental
@@ -63,6 +63,7 @@ class RentalsController < ApplicationController
 
   #user previews rental post
   def preview
+    @rental = Rental.find(params[:id])
     @rentor = current_user
     @rental = @rentor.rentals.new(rental_params)
 

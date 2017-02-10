@@ -7,7 +7,7 @@
 <br />
 <br />
 
-<%= react_component 'Carousel', props: { rentals: @rentals, rentors: @rentors }, prerender: false %>
+<%= react_component 'Carousel', props: { rentals: @rentals, rentors: @rentors, rentalLink: new_rental_path }, prerender: false %>
 
 <div class="the-browse">
   <%= react_component 'Browse'%>
