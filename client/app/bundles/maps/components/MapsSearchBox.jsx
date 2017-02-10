@@ -107,6 +107,7 @@ export default class SearchBoxExample extends Component {
     });
   }
 
+
   handlePropertyTypeChange(e) {
     this.setState({
       propertyType: e.target.value,
@@ -132,10 +133,19 @@ export default class SearchBoxExample extends Component {
       }
     }).done(function(response) {
       // Render a list of search-appropriate rentals as cards
+      // console.log(response)
       console.log(response)
+
+
     })
 
   }
+
+  componentWillMount() {
+    $.get(this.props.url, function (data) {
+      this.setState(data);
+    }.bind(this));
+  },
 
   render() {
     return (
@@ -174,4 +184,5 @@ export default class SearchBoxExample extends Component {
     );
   }
 }
+
 
