@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Carousel from '../../rentals/components/Carousel';
+// import Carousel from '../../rentals/components/Carousel';
 
 export default class Browse extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class Browse extends React.Component {
     return (
       <div>
         <div className="ui grid container stackable">
-          <Carousel />
+          <div>BROWSE</div>
         </div>
       </div>
     );
