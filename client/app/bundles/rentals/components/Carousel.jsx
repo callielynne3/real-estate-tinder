@@ -21,9 +21,6 @@ export default class Carousel extends React.Component {
     return this.props.rentors.map((rental) => {
       return (
         <div key={rental.id} className="ui card">
-          <div className="ui image">
-            <img src={rental.pictures[0]} />
-          </div>
           <div className="content">
             <div className="header">{rental.title}</div>
             <a href="/rentals/1">See More Details</a>
