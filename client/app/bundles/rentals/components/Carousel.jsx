@@ -22,7 +22,7 @@ export default class Carousel extends React.Component {
       return (
         <div key={rental.id} className="ui card something">
           <div className="ui image">
-            <img src={rental.pictures[0]]} />
+            <img src={rental.pictures[0]} />
           </div>
           <div className="content">
             <div className="header">{rental.title}</div>
