@@ -16,8 +16,9 @@ export default class Carousel extends React.Component {
     this.refs.reactSwipe.prev();
   }
 
+
   renderRentals() {
-    return this.props.rentals.map((rental) => {
+    return this.props.rentors.map((rental) => {
 
       return (
         <div key={rental.id} className="ui card">
@@ -36,11 +37,11 @@ export default class Carousel extends React.Component {
           </div>
           <div className="extra content">
             <span className="right floated">
-              Posted by
+              Posted by {rental.rentor.email}
             </span>
             <span>
               <i className="user icon"></i>
-              Posted on {rental.created_at}
+              Posted on {rental.created_at.slice(0, 10)}
             </span>
           </div>
         </div>

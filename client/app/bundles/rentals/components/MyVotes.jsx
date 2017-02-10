@@ -28,7 +28,7 @@ export default class MyVotes extends React.Component {
               </span>
               <span>
                 <i className="user icon"></i>
-                Posted on {vote.rental.created_at}
+                Posted on {vote.rental.created_at.slice(0, 10)}
               </span>
             </div>
           </div>
