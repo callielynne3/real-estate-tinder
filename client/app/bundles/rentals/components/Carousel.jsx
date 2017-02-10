@@ -57,7 +57,7 @@ export default class Carousel extends React.Component {
         </ReactSwipe>
         <div className="ui center aligned container">
           <div className="ui large buttons">
-            <button className="ui button" onClick={::this.prev}>Dislike</button>
+            <button className="ui button" onClick={::this.next}>Dislike</button>
               <div className="or"></div>
             <button className="ui button" onClick={::this.next}>Like</button>
           </div>
