@@ -8,8 +8,12 @@
     </div>
 
     <div class="column">
-      <div class="ui centered fluid image">
-        <img src="http://www.baycityguide.com/media/00PU000000FtZZxMAN/Victorians-Haight-Painted-Ladies-1500x872.jpg" />
+      <div class="ui small image">
+        <% if @rental.pictures.any? %>
+          <% @rental.pictures.each do |picture| %>
+            <img class="ui medium bordered image" src="<%= picture.url %>">
+          <% end %>
+        <% end %>
       </div>
     </div>
 
