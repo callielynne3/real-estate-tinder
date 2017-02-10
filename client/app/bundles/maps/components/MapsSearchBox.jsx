@@ -265,7 +265,7 @@ export default class SearchBoxExample extends Component {
               <option value="high">more than $4,000</option>
             </select>
 
-            <button onClick={this.handleSubmit} style={{ zIndex: '9999' }}>
+            <button onClick={this.handleSubmit}>
               Search
             </button>
           </div>

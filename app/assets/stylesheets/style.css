@@ -1,3 +1,7 @@
+* {
+  font-family: helvetica, arial, sans-serif;
+}
+
 .main-content {
   margin-top: 70px;
 }
@@ -121,6 +125,22 @@ div [title="Show street map"]{
   display: none;
 }
 
+.the-google-map {
+  background-color: #AEC2DA;
+}
+
+.rentalQueriesContainer {
+  display: flex;
+}
+
+.rentalQueries {
+  margin: 0px auto;
+  max-width: 60%;
+}
+
+.rentalQueries * {
+  margin: 5px;
+}
 .rentalQueries, .rentalQueriesContainer, .rentalQueries > select {
   z-index: 9999;
   display: flex;
