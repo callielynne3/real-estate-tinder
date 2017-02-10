@@ -1,3 +1,4 @@
+# ![HOM Cover](https://github.com/callielynne3/real-estate-tinder/blob/master/app/assets/images/hom-pics/hom.png)
 [![Build Status](https://travis-ci.org/callielynne3/real-estate-tinder.svg?branch=master)](https://travis-ci.org/callielynne3/real-estate-tinder)
 
 # Real Estate Tinder
@@ -34,8 +35,8 @@ foreman start -f Procfile.dev
 
 ## Contributors
 
-_Ibraheem Abdul-Malik_ - [@ibraheem4](https://github.com/ibraheem4)
-_Candace Lazarou_ - [@cclazarou](https://github.com/cclazarou)
-_Eric O'Rear_ - [@ejoreo](https://github.com/ejoreo)
-_Jonah Price_ - [@jyonah](https://github.com/jyonah)
-_Callie Tomlinson_ - [@callielynne3](https://github.com/callielynne3)
+* _Ibraheem Abdul-Malik_ - [@ibraheem4](https://github.com/ibraheem4)
+* _Candace Lazarou_ - [@cclazarou](https://github.com/cclazarou)
+* _Eric O'Rear_ - [@ejoreo](https://github.com/ejoreo)
+* _Jonah Price_ - [@jyonah](https://github.com/jyonah)
+* _Callie Tomlinson_ - [@callielynne3](https://github.com/callielynne3)
