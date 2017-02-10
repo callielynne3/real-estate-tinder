@@ -159,7 +159,7 @@ div [title="Show street map"]{
   background-color: white;
 }
 
-.your-daddy {
+.carousel-container {
   padding: 30px 0px;
   background-color: #334355 !important;
 }
@@ -169,8 +169,18 @@ div [title="Show street map"]{
   /*width: 102%;*/
 }
 
-.something {
-  margin: 0px 1px;
+.rental-card-carousel {
+  display: none;
+}
+
+.carousel-container .about-text {
+  color: white;
+  margin: 0px auto;
+  max-width: 70%
+}
+
+.carousel-container .about-text *{
+  font-weight: 100;
 }
 
 .google {

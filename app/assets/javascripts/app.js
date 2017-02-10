@@ -1,5 +1,7 @@
 $(document).on('turbolinks:load', function() {
 
+  attachEventListeners()
+
   // SEMANTIC UI
   $('.ui.dropdown').dropdown();
   $('select.dropdown').dropdown();
@@ -33,3 +35,15 @@ $(document).on('turbolinks:load', function() {
   });
 
 });
+
+function attachEventListeners () {
+  $('.rentalQueries button').on('click', function (e) {
+  e.preventDefault();
+  console.log('CLICKED');
+})
+}
+
+// var revealCarousel = function (e) {
+//   e.preventDefault();
+//   console.log('CLICKED');
+// }

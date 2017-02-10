@@ -21,13 +21,11 @@ node_modules
 
 # Generated js bundles
 /app/assets/webpack/*
-/app/assets/stylesheets/dist/*
 
 .env
 
 /public/uploads
 /public/assets/**
 
-/app/assets/stylesheets/dist/
 
 .sass-cache/

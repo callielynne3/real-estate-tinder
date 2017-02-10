@@ -2,6 +2,9 @@
   <%= react_component 'MapsSearchBox'%>
 </div>
 
-<%= react_component 'Carousel', props: { rentals: @rentals, rentors: @rentors, rentalLink: new_rental_path }, prerender: false %>
-
-<div id='app'></div>
+<div class="carousel-container">
+  <div class="rental-card-carousel">
+    <%= react_component 'Carousel', props: { rentals: @rentals, rentors: @rentors, rentalLink: new_rental_path }, prerender: false %>
+  </div>
+<%= render 'about' %>
+</div>
