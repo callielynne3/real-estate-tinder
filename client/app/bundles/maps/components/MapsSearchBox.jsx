@@ -203,20 +203,23 @@ export default class SearchBoxExample extends Component {
   }
 
   handleSubmit() {
-    const { address, priceRange, propertyType } = this.state;
+    // const { address, priceRange, propertyType } = this.state;
 
-    $.ajax({
-      url: '/rentals/browse',
-      method: 'get',
-      data: {
-        address,
-        priceRange,
-        propertyType,
-      }
-    }).done(function(response) {
-      // Render a list of search-appropriate rentals as cards
-      console.log(response)
-    });
+    console.log('testing')
+    
+
+    // $.ajax({
+    //   url: '/rentals/browse',
+    //   method: 'get',
+    //   data: {
+    //     address,
+    //     priceRange,
+    //     propertyType,
+    //   }
+    // }).done(function(response) {
+    //   // Render a list of search-appropriate rentals as cards
+    //   console.log(response)
+    // });
   }
 
   render() {
