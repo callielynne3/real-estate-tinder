@@ -8,7 +8,7 @@ export default class MyVotes extends React.Component {
   renderVotes() {
     return this.props.votes.map((vote) => {
       return (
-        <div key={vote.id} className="five wide column">
+        <div key={vote.rental.id} className="five wide column">
           <div className="ui card">
             <div className="image">
               <img src={vote.rental.pictures[0]} />
